@@ -26,14 +26,10 @@ jobs:
             *.cache-from=type=gha,scope=build
             *.cache-to=type=gha,scope=build,mode=max
 
-  validate:
+  mdl:
     runs-on: ubuntu-20.04
-    strategy:
-      fail-fast: false
-      matrix:
-        target:
-          - htmlproofer
-          - mdl
+    needs:
+      - build
     steps:
       -
         name: Checkout
@@ -42,12 +38,79 @@ jobs:
         name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v2
       -
-        name: Validate
+        name: Lint
         uses: docker/bake-action@v2
         with:
-          targets: ${{ matrix.target }}
+          targets: mdl-output
           set: |
+            *.cache-to=type=gha,scope=mdl,mode=max
+            *.cache-from=type=gha,scope=mdl
             *.cache-from=type=gha,scope=build
+      -
+        name: Annotate
+        uses: actions/github-script@v6
+        with:
+          script: |
+            const fs = require('fs');
+            const results = JSON.parse(fs.readFileSync('lint/results', 'utf-8'));
+            console.log(results)
+
+            for (const result of results) {
+              core.error(result.description, {
+                title: result.rule + (result.aliases.length > 0 ? ` (${result.aliases[0]})` : ``),
+                file: result.filename,
+                startLine: result.line,
+              })
+            }
+            if (results.length > 0) {
+              process.exitCode = 1
+            }
+
+  htmlproofer:
+    runs-on: ubuntu-20.04
+    needs:
+      - build
+    steps:
+      -
+        name: Checkout
+        uses: actions/checkout@v3
+      -
+        name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v2
+      -
+        name: Lint
+        uses: docker/bake-action@v2
+        with:
+          targets: htmlproofer-output
+          set: |
+            *.cache-to=type=gha,scope=htmlproofer,mode=max
+            *.cache-from=type=gha,scope=htmlproofer
+            *.cache-from=type=gha,scope=build
+      -
+        name: Annotate
+        uses: actions/github-script@v6
+        with:
+          script: |
+            const fs = require('fs');
+            const results = fs.readFileSync('lint/results', 'utf-8');
+            console.log(results)
+
+            const re = /^- (.+)\n  \*  (.+) \(line (\d+)\)\n(.+)$/gm;
+            while (true) {
+              const result = re.exec(results);
+              if (result === null) {
+                break;
+              }
+
+              core.error(`${result[2]}\n${result[4]}`, {
+                title: 'Link check failed',
+                // file: result[1],
+                // startLine: result[3],
+              })
+            }
+            if (results.length > 0) {
+              process.exitCode = 1
+            }
 
   # build-releaser job will just build _releaser app used for Netlify and
   # AWS deployment in publish workflow. it's just to be sure it builds correctly.
