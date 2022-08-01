@@ -81,7 +81,7 @@ RUN --mount=type=bind,from=generate,source=/out,target=_site \
 FROM gem AS mdl
 ARG MDL_STYLE
 RUN --mount=type=bind,target=. \
-  mdl --ignore-front-matter --style=${MDL_STYLE:-'.mdlrc.style.rb'} $( \
+  mdl --ignore-front-matter --style=${MDL_STYLE:-'.markdownlint.rb'} $( \
     find '.' -name '*.md' \
       -not -path './registry/*' \
       -not -path './desktop/extensions-sdk/*' \
