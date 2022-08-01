@@ -79,17 +79,19 @@ jobs:
                   title: 'Link check failed',
                   // file: result[1],
                   // startLine: result[3],
-                })
+                });
               }
               break;
             case "mdl":
               const jsonResults = JSON.parse(results);
               for (const result of jsonResults) {
+                const title = result.rule + (result.aliases.length > 0 ? ` (${result.aliases[0]})` : ``);
+                console.log(`${result.filename}:${result.line}; ${title} (${result.description})`);
                 core.error(result.description, {
-                  title: result.rule + (result.aliases.length > 0 ? ` (${result.aliases[0]})` : ``),
+                  title: title,
                   file: result.filename,
                   startLine: result.line,
-                })
+                });
               }
               break;
             }

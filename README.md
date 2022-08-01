@@ -36,7 +36,7 @@ We've made it really easy for you to file new issues.
 
 ![Docs feedback on each page](/opensource/images/docs-site-feedback.png)
 
-## Contribute to Docker docs
+##  Contribute to Docker docs
 
 We value your contribution. We'd like to make it as easy as possible to submit
 your contributions to the Docker docs repository. Changes to the docs are
