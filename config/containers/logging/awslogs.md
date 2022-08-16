@@ -51,7 +51,7 @@ myservice:
     options:
       awslogs-region: us-east-1
 ```
-          
+
 ## Amazon CloudWatch Logs options
 
 You can add logging options to the `daemon.json` to set Docker-wide defaults,
@@ -280,7 +280,7 @@ If not specified, the container ID is used as the log stream.
 > since a docker image has a format of `IMAGE:TAG`, such as `alpine:latest`.
 > Template markup can be used to get the proper format. To get the image name
 > and the first 12 characters of the container ID, you can use:
-> 
+>
 > {% raw %}
 > ```bash
 > --log-opt tag='{{ with split .ImageName ":" }}{{join . "_"}}{{end}}-{{.ID}}'

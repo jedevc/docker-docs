@@ -11,7 +11,7 @@ title: Known issues for Docker Desktop on Mac
 
   * Some container disk I/O is much slower than expected. See [docker/for-mac#5389](https://github.com/docker/for-mac/issues/5389). Disk flushes are particularly slow due to the need to guarantee data is written to stable storage on the host. We have also observed specific performance problems when using the `virtualization.framework` on Intel chips on MacOS Monterey.
 
-    This is an artifact of the new `virtualization.framework`. 
+    This is an artifact of the new `virtualization.framework`.
 
   * The Linux Kernel may occasionally crash. Docker now detects this problem and pops up an error dialog offering the user the ability to quickly restart Linux.
 

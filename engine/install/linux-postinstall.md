@@ -50,13 +50,13 @@ To create the `docker` group and add your user:
 3.  Log out and log back in so that your group membership is re-evaluated.
 
     If testing on a virtual machine, it may be necessary to restart the virtual machine for changes to take effect.
-    
+
     On a desktop Linux environment such as X Windows, log out of your session completely and then log back in.
-    
+
     On Linux, you can also run the following command to activate the changes to groups:
-    
-    ```console 
-    $ newgrp docker 
+
+    ```console
+    $ newgrp docker
     ```
 
 4.  Verify that you can run `docker` commands without `sudo`.
@@ -141,14 +141,14 @@ requests from local clients. It is possible to allow Docker to accept requests
 from remote hosts by configuring it to listen on an IP address and port as well
 as the UNIX socket. For more detailed information on this configuration option
 take a look at "Bind Docker to another host/port or a unix socket" section of
-the [Docker CLI Reference](/engine/reference/commandline/dockerd/) article. 
+the [Docker CLI Reference](/engine/reference/commandline/dockerd/) article.
 
 > Secure your connection
-> 
+>
 > Before configuring Docker to accept connections from remote hosts it is critically important that you
-> understand the security implications of opening docker to the network. If steps are not taken to secure the connection, 
-> it is possible for remote non-root users to gain root access on the host. For more information on how to use TLS 
-> certificates to secure this connection, check this article on 
+> understand the security implications of opening docker to the network. If steps are not taken to secure the connection,
+> it is possible for remote non-root users to gain root access on the host. For more information on how to use TLS
+> certificates to secure this connection, check this article on
 > [how to protect the Docker daemon socket](../security/protect-access.md).
 {: .warning}
 
@@ -158,8 +158,8 @@ of RedHat, CentOS, Ubuntu and SLES, or with the `daemon.json` file which is
 recommended for Linux distributions that do not use systemd.
 
 > systemd vs daemon.json
-> 
-> Configuring Docker to listen for connections using both the `systemd` unit file and the `daemon.json` 
+>
+> Configuring Docker to listen for connections using both the `systemd` unit file and the `daemon.json`
 > file causes a conflict that prevents Docker from starting.
 
 ### Configuring remote access with `systemd` unit file
@@ -193,8 +193,8 @@ recommended for Linux distributions that do not use systemd.
     ```console
     $ sudo netstat -lntp | grep dockerd
     tcp        0      0 127.0.0.1:2375          0.0.0.0:*               LISTEN      3758/dockerd
-    ``` 
-    
+    ```
+
 ### Configuring remote access with `daemon.json`
 
 1.  Set the `hosts` array in the `/etc/docker/daemon.json` to connect to the UNIX socket and an IP address, as follows:
@@ -205,15 +205,15 @@ recommended for Linux distributions that do not use systemd.
     }
     ```
 
-2.  Restart Docker. 
+2.  Restart Docker.
 
 3.  Check to see whether the change was honored by reviewing the output of `netstat` to confirm `dockerd` is listening on the configured port.
 
     ```console
     $ sudo netstat -lntp | grep dockerd
     tcp        0      0 127.0.0.1:2375          0.0.0.0:*               LISTEN      3758/dockerd
-    ``` 
-        
+    ```
+
 ## Enable IPv6 on the Docker daemon
 
 To enable IPv6 on the Docker daemon, see

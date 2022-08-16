@@ -69,7 +69,7 @@ and a `docker-compose.yml` file. (You can use either a `.yml` or `.yaml` extensi
 
    ```yaml
    version: "{{ site.compose_file_v3 }}"
-   
+
    services:
      db:
        image: postgres
@@ -143,7 +143,7 @@ In this step, you create a Django starter project by building the image from the
    If you are running Docker on Linux, the files `django-admin` created are
    owned by root. This happens because the container runs as the root user.
    Change the ownership of the new files.
-   
+
    Do not change the permission of the data folder where Postgres has its file, otherwise Postgres will not be able to start due to permission issues.
 
    ```console
@@ -176,11 +176,11 @@ In this section, you set up the database connection for Django.
 
    ```python
    # settings.py
-   
+
    import os
-   
+
    [...]
-   
+
    DATABASES = {
        'default': {
            'ENGINE': 'django.db.backends.postgresql',
@@ -238,7 +238,7 @@ In this section, you set up the database connection for Django.
    >
    > ```python
    > ALLOWED_HOSTS = ['*']
-   > ```      
+   > ```
    >
    > This value is **not** safe for production usage.  Refer to the
    > [Django documentation](https://docs.djangoproject.com/en/1.11/ref/settings/#allowed-hosts)  for more information.

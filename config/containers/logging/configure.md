@@ -19,17 +19,17 @@ As a default, Docker uses the [`json-file` logging driver](json-file.md), which
 caches container logs as JSON internally. In addition to using the logging drivers
 included with Docker, you can also implement and use [logging driver plugins](plugins.md).
 
-> **Tip: use the "local" logging driver to prevent disk-exhaustion** 
-> 
+> **Tip: use the "local" logging driver to prevent disk-exhaustion**
+>
 > By default, no log-rotation is performed. As a result, log-files stored by the
-> default [`json-file` logging driver](json-file.md) logging driver can cause 
+> default [`json-file` logging driver](json-file.md) logging driver can cause
 > a significant amount of disk space to be used for containers that generate much
 > output, which can lead to disk space exhaustion.
-> 
+>
 > Docker keeps the json-file logging driver (without log-rotation) as a default
 > to remain backward compatibility with older versions of Docker, and for situations
 > where Docker is used as runtime for Kubernetes.
-> 
+>
 > For other situations, the "local" logging driver is recommended as it performs
 > log-rotation by default, and uses a more efficient file format. Refer to the
 > [Configure the default logging driver](#configure-the-default-logging-driver)
@@ -93,7 +93,7 @@ json-file
 {% endraw %}
 
 > **Note**
-> 
+>
 > Changing the default logging driver or logging driver options in the daemon
 > configuration only affects containers that are created after the configuration
 > is changed. Existing containers retain the logging driver options that were
@@ -215,6 +215,6 @@ see more options.
 
 - Reading log information requires decompressing rotated log files, which causes
   a temporary increase in disk usage (until the log entries from the rotated
-  files are read) and an increased CPU usage while decompressing. 
+  files are read) and an increased CPU usage while decompressing.
 - The capacity of the host storage where the Docker data directory resides
   determines the maximum size of the log file information.

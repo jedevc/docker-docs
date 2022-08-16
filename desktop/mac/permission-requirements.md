@@ -27,7 +27,7 @@ This approach has the following limitations:
 
 ## Privileged Helper
 
-The privileged helper is started by `launchd` and runs in the background unless it is disabled at runtime as previously described. The Docker Desktop backend communicates with it over the UNIX domain socket `/var/run/com.docker.vmnetd.sock`. The functionalities it performs are: 
+The privileged helper is started by `launchd` and runs in the background unless it is disabled at runtime as previously described. The Docker Desktop backend communicates with it over the UNIX domain socket `/var/run/com.docker.vmnetd.sock`. The functionalities it performs are:
 - Installing and uninstalling symlinks in `/usr/local/bin`. This ensures the `docker` CLI is on the user’s PATH without having to reconfigure shells, log out then log back in for example.
 - Binding privileged ports that are less than 1024. The so-called "privileged ports" have not generally been used as a security boundary, however OSes still prevent unprivileged processes from binding them which breaks commands like `docker run -p 80:80 nginx`
 - Ensuring `localhost` and `kubernetes.docker.internal` are defined in `/etc/hosts`. Some old macOS installs did not have `localhost` in `/etc/hosts`, which caused Docker to fail. Defining the DNS name `kubernetes.docker.internal` allows us to share Kubernetes contexts with containers.

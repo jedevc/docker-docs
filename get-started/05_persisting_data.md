@@ -62,11 +62,11 @@ What you'll see is that the files created in one container aren't available in a
 
 ## Container volumes
 
-With the previous experiment, we saw that each container starts from the image definition each time it starts. 
-While containers can create, update, and delete files, those changes are lost when the container is removed 
+With the previous experiment, we saw that each container starts from the image definition each time it starts.
+While containers can create, update, and delete files, those changes are lost when the container is removed
 and all changes are isolated to that container. With volumes, we can change all of this.
 
-[Volumes](../storage/volumes.md) provide the ability to connect specific filesystem paths of 
+[Volumes](../storage/volumes.md) provide the ability to connect specific filesystem paths of
 the container back to the host machine. If a directory in the container is mounted, changes in that
 directory are also seen on the host machine. If we mount that same directory across container restarts, we'd see
 the same files.
@@ -76,17 +76,17 @@ There are two main types of volumes. We will eventually use both, but we will st
 ## Persist the todo data
 
 By default, the todo app stores its data in a [SQLite Database](https://www.sqlite.org/index.html){:target="_blank" rel="noopener" class="_"} at
-`/etc/todos/todo.db` in the container's filesystem. If you're not familiar with SQLite, no worries! It's simply a relational database in 
+`/etc/todos/todo.db` in the container's filesystem. If you're not familiar with SQLite, no worries! It's simply a relational database in
 which all of the data is stored in a single file. While this isn't the best for large-scale applications,
 it works for small demos. We'll talk about switching this to a different database engine later.
 
 With the database being a single file, if we can persist that file on the host and make it available to the
 next container, it should be able to pick up where the last one left off. By creating a volume and attaching
-(often called "mounting") it to the directory the data is stored in, we can persist the data. As our container 
+(often called "mounting") it to the directory the data is stored in, we can persist the data. As our container
 writes to the `todo.db` file, it will be persisted to the host in the volume.
 
-As mentioned, we are going to use a **named volume**. Think of a named volume as simply a bucket of data. 
-Docker maintains the physical location on the disk and you only need to remember the name of the volume. 
+As mentioned, we are going to use a **named volume**. Think of a named volume as simply a bucket of data.
+Docker maintains the physical location on the disk and you only need to remember the name of the volume.
 Every time you use the volume, Docker will make sure the correct data is provided.
 
 1. Create a volume by using the `docker volume create` command.
@@ -122,14 +122,14 @@ Hooray! You've now learned how to persist data!
 >**Note**
 >
 >While named volumes and bind mounts (which we'll talk about in a minute) are the two main types of volumes supported
->by a default Docker engine installation, there are many volume driver plugins available to support NFS, SFTP, NetApp, 
+>by a default Docker engine installation, there are many volume driver plugins available to support NFS, SFTP, NetApp,
 >and more! This will be especially important once you start running containers on multiple hosts in a clustered
 >environment with Swarm, Kubernetes, etc.
 >
 
 ## Dive into the volume
 
-A lot of people frequently ask "Where is Docker _actually_ storing my data when I use a named volume?" If you want to know, 
+A lot of people frequently ask "Where is Docker _actually_ storing my data when I use a named volume?" If you want to know,
 you can use the `docker volume inspect` command.
 
 ```console

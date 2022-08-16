@@ -47,7 +47,7 @@ it for the version of SLES you are running. Run the following commands to add it
 ```console
 $ sles_version="$(. /etc/os-release && echo "${VERSION_ID##*.}")"
 $ opensuse_repo="https://download.opensuse.org/repositories/security:SELinux/SLE_15_SP$sles_version/security:SELinux.repo"
-$ sudo zypper addrepo $opensuse_repo 
+$ sudo zypper addrepo $opensuse_repo
 ```
 
 The `overlay2` storage driver is recommended.
@@ -130,7 +130,7 @@ $ sudo zypper addrepo {{ download-url-base }}/docker-ce.repo
 
     ```console
     $ sudo zypper search -s --match-exact docker-ce | sort -r
-    
+
       v  | docker-ce | package | 3:20.10.8-3 | s390x | Docker CE Stable - s390x
       v  | docker-ce | package | 3:20.10.7-3 | s390x | Docker CE Stable - s390x
     ```

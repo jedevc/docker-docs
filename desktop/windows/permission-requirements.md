@@ -18,7 +18,7 @@ The reason for this approach is that Docker Desktop needs to perform a limited s
 
 The privileged helper `com.docker.service.exe` is a Windows service which runs in the background with `SYSTEM` privileges. It listens on the named pipe `//./pipe/dockerBackendV2`. The developer runs the Docker Desktop application, which connects to the named pipe and sends commands to the service. This named pipe is protected, and only users that are part of the `docker-users` group can have access to it.
 
-The service performs the following functionalities: 
+The service performs the following functionalities:
 - Ensuring that `kubernetes.docker.internal` is defined in the Win32 hosts file. Defining the DNS name `kubernetes.docker.internal` allows Docker to share Kubernetes contexts with containers.
 - Securely caching the Registry Access Management policy which is read-only for the developer.
 - Creating the Hyper-V VM `"DockerDesktopVM"` and managing its lifecycle - starting, stopping and destroying it. The VM name is hard coded in the service code so the service cannot be used for creating or manipulating any other VMs.
@@ -34,12 +34,12 @@ The service performs the following functionalities:
 
 ## Containers running as root within the Linux VM
 
-The Linux Docker daemon and containers run in a minimal, special-purpose Linux VM managed by Docker. It is immutable so users can’t extend it or change the installed software. 
+The Linux Docker daemon and containers run in a minimal, special-purpose Linux VM managed by Docker. It is immutable so users can’t extend it or change the installed software.
 This means that although containers run by default as `root`, this does not allow altering the VM and does not grant `Administrator` access to the Windows host machine. The Linux VM serves as a security boundary and limits what resources from the host can be accessed. File sharing uses a user-space crafted file server and any directories from the host bind mounted into Docker containers still retain their original permissions. It does not give the user access to any files that it doesn’t already have access to.
 
 ## Windows Containers
 
-Unlike the Linux Docker engine and containers which run in a VM, Windows containers are an operating system feature, and run directly on the Windows host with `Administrator` privileges. For organizations which do not want their developers to run Windows containers, a `–no-windows-containers` installer flag is available from version 4.11 to disable their use. 
+Unlike the Linux Docker engine and containers which run in a VM, Windows containers are an operating system feature, and run directly on the Windows host with `Administrator` privileges. For organizations which do not want their developers to run Windows containers, a `–no-windows-containers` installer flag is available from version 4.11 to disable their use.
 
 ## Networking
 

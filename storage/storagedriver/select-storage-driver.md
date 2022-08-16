@@ -18,7 +18,7 @@ storage driver controls how images and containers are stored and managed on your
 Docker host. After you have read the [storage driver overview](index.md), the
 next step is to choose the best storage driver for your workloads. Use the storage
 driver with the best overall performance and stability in the most usual scenarios.
-  
+
 The Docker Engine provides the following storage drivers on Linux:
 
 | Driver             | Description                                                                                                                                                                                                                                                                                                                                                                                                     |
@@ -195,7 +195,7 @@ driver. Some drivers require additional configuration, including configuration
 to physical or logical disks on the Docker host.
 
 > **Important**
-> 
+>
 > When you change the storage driver, any existing images and containers become
 > inaccessible. This is because their layers cannot be used by the new storage
 > driver. If you revert your changes, you can access the old images and containers

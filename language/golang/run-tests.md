@@ -71,7 +71,7 @@ $ docker build -t docker-gs-ping:latest .
 
 In the above example we've omitted most of the output, only displaying the first line indicating that the build was successful.
 
-Note, that the image is tagged with `latest` which is the same label we've chosen to use in our `main_test.go` tests. 
+Note, that the image is tagged with `latest` which is the same label we've chosen to use in our `main_test.go` tests.
 
 Now that the Docker image for our application had been built, we can run the tests that depend on it:
 

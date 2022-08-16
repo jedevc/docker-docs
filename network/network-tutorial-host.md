@@ -28,7 +28,7 @@ host.
 
 ## Procedure
 
-1.  Create and start the container as a detached process. The `--rm` option means to remove the container once it exits/stops. The `-d` flag means to start the container detached (in the background). 
+1.  Create and start the container as a detached process. The `--rm` option means to remove the container once it exits/stops. The `-d` flag means to start the container detached (in the background).
 
     ```console
     $ docker run --rm -d --network host --name my_nginx nginx

@@ -15,6 +15,7 @@ rule 'no-multiple-space-closed-atx'
 rule 'no-space-in-emphasis'
 rule 'no-space-in-code'
 rule 'no-space-in-links'
+rule 'no-trailing-spaces', :br_spaces => 2
 
 # miscellaneous
 rule 'ol-prefix', :style => :ordered

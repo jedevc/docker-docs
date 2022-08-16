@@ -4,7 +4,7 @@ description: Docker extension OAuth 2.0 flow
 keywords: Docker, extensions, sdk, OAuth 2.0
 ---
 
-> Note
+> **Note**
 >
 > This page assumes that you already have an Identity Provider (IdP), such as Google, Azure AD or Okta, which handles the authentication process and returns an access token.
 

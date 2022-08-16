@@ -81,7 +81,7 @@ Now, we can add the steps required. The first one checks-out our repository unde
 ```yaml
     steps:
 
-      - name: Check Out Repo 
+      - name: Check Out Repo
         uses: actions/checkout@v2
 
       - name: Login to Docker Hub

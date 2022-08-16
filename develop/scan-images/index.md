@@ -32,7 +32,7 @@ Including the vulnerability scanning options into the Docker platform extends th
 > CVE-2021-44228](https://nvd.nist.gov/vuln/detail/CVE-2021-44228){:
 > target="_blank" rel="noopener" class="_"}. You must update your Docker Desktop
 > installation to version 4.3.1 or higher to fix this issue. For more information,
-> see [Scan images for Log4j 2 CVE](../../engine/scan#scan-images-for-log4j-2-cve). 
+> see [Scan images for Log4j 2 CVE](../../engine/scan#scan-images-for-log4j-2-cve).
 {: .important}
 
 You can trigger scans automatically by pushing an image to Docker Hub. You can achieve this either through the `docker scan` command in the CLI, or through Docker Hub.

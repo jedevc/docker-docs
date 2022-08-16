@@ -12,7 +12,7 @@ By default, the **Volumes** view displays a list of all the volumes. Volumes tha
 
 ## Manage your volumes
 
-Use the **Search** field to search for any specific volume. 
+Use the **Search** field to search for any specific volume.
 
 You can sort volumes by:
 - Name
@@ -33,6 +33,6 @@ To delete a file or a folder from the volume, select **Remove** from the **More 
 
 ## Remove a volume
 
-Removing a volume deletes the volume and all its data. 
+Removing a volume deletes the volume and all its data.
 
 To remove a volume, hover over the volume and then click the **Delete** icon. Alternatively, select the volume from the list and then click the **Delete** button.

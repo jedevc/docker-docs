@@ -35,7 +35,7 @@ Before we can publish our Docker image to Docker Hub, we must grant GitHub Actio
 
 To set up the access to Docker Hub API:
 
-1. Create a new Personal Access Token (PAT) for Docker Hub. 
+1. Create a new Personal Access Token (PAT) for Docker Hub.
 
     * Go to the [Docker Hub Account Settings](https://hub.docker.com/settings/security) and then click **New Access Token**.
     * Let's call this token `docker-gs-ping-ci`. Input the name and click **Create**.

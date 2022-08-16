@@ -24,5 +24,5 @@ toc_max: 2
 > use Docker Desktop instead. See [Docker Desktop for Mac](../desktop/index.md)
 {: .warning }
 
-The source code for Toolbox has been archived, You can find the source code 
+The source code for Toolbox has been archived, You can find the source code
 on [GitHub](https://github.com/docker-archive/toolbox){:target="_blank" rel="noopener" class="_"}.

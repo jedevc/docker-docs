@@ -379,9 +379,9 @@ For more information about the vulnerability data, see [Docker Vulnerability Sca
 Docker scan allows you to choose the level of vulnerabilities displayed in your scan report using the `--severity` flag.
 You can set the severity flag to `low`, `medium`, or `high` depending on the level of vulnerabilities you’d like to see in your report.  
 For example, if you set the severity level as `medium`, the scan report displays all vulnerabilities that are classified as medium and high.
- 
- ```console
-$ docker scan --severity=medium docker-scan:e2e 
+
+```console
+$ docker scan --severity=medium docker-scan:e2e
 ./bin/docker-scan_darwin_amd64 scan --severity=medium docker-scan:e2e
 
 Testing docker-scan:e2e...
@@ -455,8 +455,9 @@ Provider:   Snyk (1.432.0)
 
 > **Note:**
 >
-> Docker Scan uses the Snyk binary installed in your environment by default. If 
-this is not available, it uses the Snyk binary embedded in Docker Desktop.
+> Docker Scan uses the Snyk binary installed in your environment by default. If
+> this is not available, it uses the Snyk binary embedded in Docker Desktop.
+>
 > The minimum version required for Snyk is `1.385.0`.
 
 ## Supported options

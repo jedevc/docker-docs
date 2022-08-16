@@ -5,7 +5,7 @@ keywords: build, security, engine, secret, BuildKit
 ---
 
 Docker Build is one of the most used features of the Docker Engine - users
-ranging from developers, build teams, and release teams all use Docker Build. 
+ranging from developers, build teams, and release teams all use Docker Build.
 
 Docker Build enhancements for 18.09 release introduces a much-needed overhaul of
 the build architecture. By integrating BuildKit, users should see an improvement
@@ -16,7 +16,7 @@ on performance, storage management, feature functionality, and security.
 * the Dockerfile format that works on legacy build will also work with BuildKit
   builds
 * The new `--secret` command line option allows the user to pass secret
-  information for building new images with a specified Dockerfile 
+  information for building new images with a specified Dockerfile
 
 For more information on build options, see the reference guide on the
 [command line build options](../../engine/reference/commandline/build.md) and
@@ -26,7 +26,7 @@ the [Dockerfile reference](/engine/reference/builder/) page.
 ## Requirements
 
 * A current version of Docker (18.09 or higher)
-* Network connection required for downloading images of custom frontends 
+* Network connection required for downloading images of custom frontends
 
 ## Limitations
 
@@ -53,9 +53,9 @@ To enable docker BuildKit by default, set daemon configuration in
 New docker build BuildKit TTY output (default):
 
 ```console
-$ docker build . 
+$ docker build .
 
-[+] Building 70.9s (34/59)                                                      
+[+] Building 70.9s (34/59)
  => [runc 1/4] COPY hack/dockerfile/install/install.sh ./install.sh       14.0s
  => [frozen-images 3/4] RUN /download-frozen-image-v2.sh /build  buildpa  24.9s
  => [containerd 4/5] RUN PREFIX=/build/ ./install.sh containerd           37.1s
@@ -83,7 +83,7 @@ $ docker build .
 New docker build BuildKit plain output:
 
 ```console
-$ docker build --progress=plain . 
+$ docker build --progress=plain .
 
 #1 [internal] load .dockerignore
 #1       digest: sha256:d0b5f1b2d994bfdacee98198b07119b61cf2442e548a41cf4cd6d0471a627414

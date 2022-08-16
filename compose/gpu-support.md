@@ -6,8 +6,8 @@ title: Enabling GPU access with Compose
 
 Compose services can define GPU device reservations if the Docker host contains such devices and the Docker Daemon is set accordingly. For this, make sure to install the [prerequisites](../config/containers/resource_constraints.md#gpu) if you have not already done so.
 
-The examples in the following sections focus specifically on providing service containers access to GPU devices with Docker Compose. 
-You can use either `docker-compose` or `docker compose` commands.  
+The examples in the following sections focus specifically on providing service containers access to GPU devices with Docker Compose.
+You can use either `docker-compose` or `docker compose` commands.
 See also, [Compose command compatibility with docker-compose](cli-command-compatibility.md).
 
 ### Use of service `runtime` property from Compose v2.3 format (legacy)
@@ -25,7 +25,7 @@ services:
 
 ### Enabling GPU access to service containers
 
-Docker Compose v1.28.0+ allows to define GPU reservations using the [device](https://github.com/compose-spec/compose-spec/blob/master/deploy.md#devices) structure defined in the Compose Specification. This provides more granular control over a GPU reservation as custom values can be set for the following device properties: 
+Docker Compose v1.28.0+ allows to define GPU reservations using the [device](https://github.com/compose-spec/compose-spec/blob/master/deploy.md#devices) structure defined in the Compose Specification. This provides more granular control over a GPU reservation as custom values can be set for the following device properties:
 
 - [capabilities](https://github.com/compose-spec/compose-spec/blob/master/deploy.md#capabilities){:target="_blank" rel="noopener" class="_"} - value specifies as a list of strings (eg. `capabilities: [gpu]`). You must set this field in the Compose file. Otherwise, it returns an error on service deployment.
 - [count](https://github.com/compose-spec/compose-spec/blob/master/deploy.md#count){:target="_blank" rel="noopener" class="_"} - value specified as an int or the value `all` representing the number of GPU devices that should be reserved ( providing the host holds that number of GPUs).
@@ -65,7 +65,7 @@ Run with Docker Compose:
 $ docker compose up
 Creating network "gpu_default" with the default driver
 Creating gpu_test_1 ... done
-Attaching to gpu_test_1    
+Attaching to gpu_test_1
 test_1  | +-----------------------------------------------------------------------------+
 test_1  | | NVIDIA-SMI 450.80.02    Driver Version: 450.80.02    CUDA Version: 11.1     |
 test_1  | |-------------------------------+----------------------+----------------------+
@@ -77,7 +77,7 @@ test_1  | |   0  Tesla T4            On   | 00000000:00:1E.0 Off |              
 test_1  | | N/A   23C    P8     9W /  70W |      0MiB / 15109MiB |      0%      Default |
 test_1  | |                               |                      |                  N/A |
 test_1  | +-------------------------------+----------------------+----------------------+
-test_1  |                                                                                
+test_1  |
 test_1  | +-----------------------------------------------------------------------------+
 test_1  | | Processes:                                                                  |
 test_1  | |  GPU   GI   CI        PID   Type   Process name                  GPU Memory |
@@ -119,7 +119,7 @@ gpu_test_1 exited with code 0
 On machines hosting multiple GPUs, `device_ids` field can be set to target specific GPU devices and `count` can be used to limit the number of GPU devices assigned to a service container. If `count` exceeds the number of available GPUs on the host, the deployment will error out.
 
 ```console
-$ nvidia-smi   
+$ nvidia-smi
 +-----------------------------------------------------------------------------+
 | NVIDIA-SMI 450.80.02    Driver Version: 450.80.02    CUDA Version: 11.0     |
 |-------------------------------+----------------------+----------------------+

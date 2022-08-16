@@ -144,7 +144,7 @@ There are two steps: (1) configure credentials, and (2) configure endpoints.
         export DOCKER_REGISTRY_API_DEBUG="true"
         ```
 
-    * Windows  
+    * Windows
 
         * Windows command prompt
 
@@ -156,7 +156,7 @@ There are two steps: (1) configure credentials, and (2) configure endpoints.
 
           ```bash
           $env:DOCKER_REGISTRY_API_DEBUG="true"
-          ```        
+          ```
 
 ### Syntax
 
@@ -213,7 +213,7 @@ There are two steps: (1) configure credentials, and (2) configure endpoints.
       -get-logs-script string
         	 An optional custom script used to retrieve the logs.
       -insecure-skip-verify
-           Optional. Specifies to disable SSL verification for an insecure private Docker Registry.         
+           Optional. Specifies to disable SSL verification for an insecure private Docker Registry.
       -help
         	 Help on the command.
       -html

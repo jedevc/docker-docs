@@ -242,8 +242,8 @@ Verify that the Docker target is listed at http://localhost:9090/targets/.
 
 ![Prometheus targets page](images/prometheus-targets.png)
 
-You can't access the endpoint URLs directly if you use Docker Desktop 
-for Mac or Docker Desktop for Windows.
+You can't access the endpoint URLs directly if you use Docker Desktop for Mac
+or Docker Desktop for Windows.
 
 ## Use Prometheus
 

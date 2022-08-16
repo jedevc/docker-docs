@@ -4,7 +4,7 @@ keywords: documentation, docs, docker, compose, containers
 title: Compose command compatibility with docker-compose
 ---
 
-The `compose` command in the Docker CLI supports most of the `docker-compose` commands and flags. It is expected to be a drop-in replacement for `docker-compose`. 
+The `compose` command in the Docker CLI supports most of the `docker-compose` commands and flags. It is expected to be a drop-in replacement for `docker-compose`.
 
 If you see any Compose functionality that is not available in the `compose` command, create an issue in the [Compose](https://github.com/docker/compose/issues){:target="_blank" rel="noopener" class="_"} GitHub repository, so we can prioritize it.
 
@@ -27,8 +27,7 @@ either because they are already deprecated in `docker-compose`, or because they 
 Global flags:
 
 * `--compatibility` has been resignified Docker Compose V2. This now means that in the command running V2 will behave as V1 used to do.
-  * One difference is in the word separator on container names. V1 used to use `_` as separator while V2 uses `-` to keep the names more hostname friendly. So when using `--compatibility` Docker 
-    Compose should use `_` again. Just make sure to stick to one of them otherwise Docker Compose will not be able to recognize the container as an instance of the service.
+  * One difference is in the word separator on container names. V1 used to use `_` as separator while V2 uses `-` to keep the names more hostname friendly. So when using `--compatibility`, Docker Compose should use `_` again. Just make sure to stick to one of them otherwise Docker Compose will not be able to recognize the container as an instance of the service.
 
 ## Config command
 
@@ -85,7 +84,7 @@ $ docker compose cp --all ~/local/path/to/source/file my-service:~/path/to/copie
 
 ### List
 
-The ls command is intended to list the Compose projects. By default, the command only lists the running projects, 
+The ls command is intended to list the Compose projects. By default, the command only lists the running projects,
 we can use flags to display the stopped projects, to filter by conditions and change the output to `json` format for example.
 
 ```console

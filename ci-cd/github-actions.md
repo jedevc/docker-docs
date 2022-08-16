@@ -104,7 +104,7 @@ BuildKit container under the hood.
 ```yaml
     steps:
       -
-        name: Checkout 
+        name: Checkout
         uses: actions/checkout@v2
       -
         name: Login to Docker Hub

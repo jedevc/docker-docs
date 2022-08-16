@@ -1,6 +1,6 @@
 ---
 title: "Share the application"
-keywords: get started, setup, orientation, quickstart, intro, concepts, containers, docker desktop, docker hub, sharing 
+keywords: get started, setup, orientation, quickstart, intro, concepts, containers, docker desktop, docker hub, sharing
 redirect_from:
 - /get-started/part3/
 description: Sharing our image we built for our example application so we can run it else where and other developers can use it
@@ -59,7 +59,7 @@ If you look at the image below an example **Docker command** can be seen. This c
     $ docker tag getting-started YOUR-USER-NAME/getting-started
     ```
 
-4. Now try your push command again. If you're copying the value from Docker Hub, you can drop the 
+4. Now try your push command again. If you're copying the value from Docker Hub, you can drop the
    `tagname` portion, as we didn't add a tag to the image name. If you don't specify a tag, Docker
    will use a tag called `latest`.
 
@@ -102,5 +102,5 @@ can use the latest version of the image.
 
 Now that we have that figured out, let's circle back around to what we noticed at the end of the last
 section. As a reminder, we noticed that when we restarted the app, we lost all of our todo list items.
-That's obviously not a great user experience, so let's learn how we can persist the data across 
+That's obviously not a great user experience, so let's learn how we can persist the data across
 restarts!

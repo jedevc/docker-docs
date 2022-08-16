@@ -4,7 +4,7 @@ keywords: Docker Dashboard, manage, containers, gui, dashboard, images, user man
 title: Explore Images
 ---
 
-The **Images**  view is a simple interface that lets you manage Docker images without having to use the CLI. By default, it displays a list of all Docker images on your local disk. 
+The **Images** view is a simple interface that lets you manage Docker images without having to use the CLI. By default, it displays a list of all Docker images on your local disk.
 
 You can also view images in remote repositories, once you have signed in to Docker Hub. This allows you to collaborate with your team and manage your images directly through Docker Desktop.
 
@@ -49,7 +49,7 @@ Inspecting an image displays detailed information about the image such as the:
 - Date the image was created
 - Size of the imag
 
-To inspect an image, hover over an image, select the **More options** button and then select **Inspect** from the dropdown menu. 
+To inspect an image, hover over an image, select the **More options** button and then select **Inspect** from the dropdown menu.
 
 ## Pull the latest image from Docker Hub
 

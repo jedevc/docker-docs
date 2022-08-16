@@ -169,11 +169,11 @@ Usually the very first thing you do once you’ve downloaded a project written i
 Go is to install the modules necessary to compile it.
 
 But before we can run `go mod download` inside our image, we need to get our
-`go.mod` and `go.sum` files copied into it. We use the `COPY` command to do this. 
+`go.mod` and `go.sum` files copied into it. We use the `COPY` command to do this.
 
 In its simplest form, the `COPY` command takes two parameters. The first
 parameter tells Docker what files you want to copy into the image. The last
-parameter tells Docker where you want that file to be copied to. 
+parameter tells Docker where you want that file to be copied to.
 
 We’ll copy the `go.mod` and `go.sum` file into our project directory `/app` which,
 owing to our use of `WORKDIR`, is the current directory (`.`) inside the image.
@@ -195,7 +195,7 @@ RUN go mod download
 
 At this point, we have an image that is based on Go environment version 1.16
 (or a later minor version, since we had specified `1.16` as our tag in the
-`FROM` command) and we have installed our dependencies. 
+`FROM` command) and we have installed our dependencies.
 
 The next thing we need to do is to copy our source code into the image. We’ll
 use the `COPY` command just like we did with our module files before.
@@ -206,7 +206,7 @@ COPY *.go ./
 
 This `COPY` command uses a wildcard to copy all files with `.go` extension
 located in the current directory on the host (the directory where the `Dockerfile`
-is located) into the current directory inside the image. 
+is located) into the current directory inside the image.
 
 Now, we would like to compile our application. To that end, we use the familiar
 `RUN` command:
@@ -223,7 +223,7 @@ regard. It's just convenient to use it to keep the file paths short for improved
 readability.
 
 Now, all that is left to do is to tell Docker what command to execute when our
-image is used to start a container. 
+image is used to start a container.
 
 We do this with the `CMD` command:
 

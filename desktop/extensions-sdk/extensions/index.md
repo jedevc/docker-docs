@@ -14,19 +14,17 @@ Push the image to Docker Hub:
 
 `docker push owner/<name-of-your-extension>`
 
-> Note
-> 
+> **Note**
+>
 > For Docker Extensions images to be listed in Docker Desktop, they must be approved by Docker and the tags must follow semantic versioning, e.g: `0.0.1`.
-> 
+>
 > See [distribution and new releases](DISTRIBUTION.md#distribution-and-new-releases) for more information.
-> 
+>
 > See [semver.org](https://semver.org/) to learn more about semantic versioning.
-> 
 
 > Having trouble pushing the image?
-> 
+>
 > Ensure you are logged into DockerHub. Otherwise, run `docker login` to authenticate.
-> 
 
 ## Publish your extension in the Marketplace
 

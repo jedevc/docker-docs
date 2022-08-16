@@ -75,9 +75,9 @@ To view an organization:
       > You can't _directly_ log in to an organization. This is especially
       > important to note if you create an organization by
       [converting a user account](convert-account.md), as conversion means you lose the ability to log into that
-      > "account", since it no longer exists. To view the organization you 
+      > "account", since it no longer exists. To view the organization you
       > need to log in with the new owner account assigned during the
-      > conversion or another account that was added as a member. If you 
+      > conversion or another account that was added as a member. If you
       > don't see the organization after logging in,
       > then you are neither a member or an owner of it. An organization
       > administrator will need to add you as a member of the organization.

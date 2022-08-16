@@ -12,7 +12,7 @@ title: Frequently asked questions
 ### What are the system requirements for Docker Desktop?
 
 For information about Docker Desktop system requirements, see:
-- [Mac system requirements](../install/mac-install.md#system-requirements) 
+- [Mac system requirements](../install/mac-install.md#system-requirements)
 - [Windows system requirements](../install/windows-install.md#system-requirements)
 - [Linux system requirements](../install/linux-install.md#system-requirements)
 
@@ -123,7 +123,7 @@ After updating the `settings.json` file, close and restart Docker Desktop to app
 
 ### Can I run Docker Desktop on Virtualized hardware?
 
-No, currently this is unsupported and against terms of use. 
+No, currently this is unsupported and against terms of use.
 
 ## Releases
 
@@ -145,4 +145,4 @@ Sometimes we may roll out a new version gradually over a few days. Therefore, if
 
 ### Where can I find information about Stable and Edge releases?
 
-Starting with Docker Desktop 3.0.0, Stable and Edge releases are combined into a single, cumulative release stream for all users. 
+Starting with Docker Desktop 3.0.0, Stable and Edge releases are combined into a single, cumulative release stream for all users.

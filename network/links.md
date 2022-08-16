@@ -7,15 +7,15 @@ redirect_from:
 title: Legacy container links
 ---
 
->**Warning**
-> 
->The `--link` flag is a legacy feature of Docker. It may eventually
-be removed. Unless you absolutely need to continue using it, we recommend that you use
-user-defined networks to facilitate communication between two containers instead of using
-`--link`. One feature that user-defined networks do not support that you can do
-with `--link` is sharing environment variables between containers. However,
-you can use other mechanisms such as volumes to share environment variables
-between containers in a more controlled way.
+> **Warning**
+>
+> The `--link` flag is a legacy feature of Docker. It may eventually be
+> removed. Unless you absolutely need to continue using it, we recommend that
+> you use user-defined networks to facilitate communication between two
+> containers instead of using `--link`. One feature that user-defined networks
+> do not support that you can do with `--link` is sharing environment variables
+> between containers. However, you can use other mechanisms such as volumes to
+> share environment variables between containers in a more controlled way.
 >
 > See [Differences between user-defined bridges and the default bridge](bridge.md#differences-between-user-defined-bridges-and-the-default-bridge)
 > for some alternatives to using `--link`.

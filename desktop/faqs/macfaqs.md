@@ -28,7 +28,8 @@ The privileged helper process `com.docker.vmnetd` is started by `launchd` and
 runs in the background. The process does not consume any resources unless
 Docker.app connects to it, so it's safe to ignore.
 
-### Where does Docker Desktop store Linux containers and images? 
+### Where does Docker Desktop store Linux containers and images?
+
 Docker Desktop stores Linux containers and images in a single, large "disk image" file in the Mac filesystem. This is different from Docker on Linux, which usually stores containers and images in the `/var/lib/docker` directory.
 
 #### Where is the disk image file?

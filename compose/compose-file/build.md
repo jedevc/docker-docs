@@ -165,10 +165,10 @@ Simple `default` sample
 ```yaml
 build:
   context: .
-  ssh: 
+  ssh:
     - default   # mount the default ssh agent
 ```
-or 
+or
 ```yaml
 build:
   context: .
@@ -179,7 +179,7 @@ Using a custom id `myproject` with path to a local SSH key:
 ```yaml
 build:
   context: .
-  ssh: 
+  ssh:
     - myproject=~/.ssh/myproject.pem
 ```
 Image builder can then rely on this to mount SSH key during build.
@@ -216,12 +216,12 @@ Unsupported caches MUST be ignored and not prevent user from building image.
 ```yml
 build:
   context: .
-  cache_to: 
+  cache_to:
    - user/app:cache
    - type=local,dest=path/to/cache
 ```
 
-Cache target is defined using the same `type=TYPE[,KEY=VALUE]` syntax defined by [`cache_from`](#cache_from). 
+Cache target is defined using the same `type=TYPE[,KEY=VALUE]` syntax defined by [`cache_from`](#cache_from).
 
 Unsupported cache target MUST be ignored and not prevent user from building image.
 

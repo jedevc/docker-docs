@@ -4,7 +4,7 @@ keywords: Dev Environments, share, collaborate, local, compose
 title: Create a Compose Dev Environment
 ---
 
-Use Dev Environments to collaborate on any Docker Compose-based projects. 
+Use Dev Environments to collaborate on any Docker Compose-based projects.
 
 As with a simple Dev Environment, you can create a Compose Dev Environment from a:
 - Git repository
@@ -18,15 +18,15 @@ As with a simple Dev Environment, you can create a Compose Dev Environment from 
 
 ## Create a Compose Dev Environment
 
-The example below, taken from the `compose-dev-env` project from the [Docker Samples](https://github.com/dockersamples/compose-dev-env){:target="_blank" rel="noopener" class="_"} GitHub repository, demonstrates how to create a Compose Dev Environment from a Git repository. 
+The example below, taken from the `compose-dev-env` project from the [Docker Samples](https://github.com/dockersamples/compose-dev-env){:target="_blank" rel="noopener" class="_"} GitHub repository, demonstrates how to create a Compose Dev Environment from a Git repository.
 
->Note
+> **Note**
 >
->If you want to create a Compose Dev Environment from a subdirectory of a Git repo, you need to define your own compose file in a .docker folder located in your subdirectory as currently, Dev Environments is not able to detect the main language of the subdirectory. 
+> If you want to create a Compose Dev Environment from a subdirectory of a Git repo, you need to define your own compose file in a .docker folder located in your subdirectory as currently, Dev Environments is not able to detect the main language of the subdirectory.
 >
->For more information on how to configure, see the [React application with a Spring backend and a MySQL database sample](https://github.com/docker/awesome-compose/tree/master/react-java-mysql) or the [Go server with an Nginx proxy and a Postgres database sample](https://github.com/docker/awesome-compose/tree/master/nginx-golang-postgres). 
+> For more information on how to configure, see the [React application with a Spring backend and a MySQL database sample](https://github.com/docker/awesome-compose/tree/master/react-java-mysql) or the [Go server with an Nginx proxy and a Postgres database sample](https://github.com/docker/awesome-compose/tree/master/nginx-golang-postgres).
 
-1. From **Dev Environments**, select **Create**. The **Create a Dev Environment** dialog displays. 
+1. From **Dev Environments**, select **Create**. The **Create a Dev Environment** dialog displays.
 2. Click **Get Started** and then copy `https://github.com/dockersamples/compose-dev-env.git` and add it to the **Enter the Git Repository** field on the **Existing Git repo** tab.
 3. Click **Continue**. This initializes the project, clones the Git code, and builds the Compose application. This:
 

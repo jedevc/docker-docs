@@ -48,7 +48,7 @@ In this release, Docker Compose recreates new resources (networks, volumes, secr
 ### Bug fixes
 
 - Fixed interpolation error message output. Fixes [compose-spec/compose-go#292](https://github.com/compose-spec/compose-go/pull/292){:target="_blank" rel="noopener" class="_"}.
-- Defined precedence of the environment variables evaluation. Fixes [compose#9521](https://github.com/docker/compose/issues/9606){:target="_blank" rel="noopener" class="_"}, 
+- Defined precedence of the environment variables evaluation. Fixes [compose#9521](https://github.com/docker/compose/issues/9606){:target="_blank" rel="noopener" class="_"},
 [compose#9638](https://github.com/docker/compose/issues/9638){:target="_blank" rel="noopener" class="_"},
 [compose#9608](https://github.com/docker/compose/issues/9608){:target="_blank" rel="noopener" class="_"},
 [compose#9578](https://github.com/docker/compose/issues/9578){:target="_blank" rel="noopener" class="_"}.
@@ -79,7 +79,7 @@ For the full change log or additional information, check the [Compose repository
 - Used appropriate dependency condition for one-shot containers when running `compose up --wait`. Fixes [compose#9606](https://github.com/docker/compose/pull/9572){:target="_blank" rel="noopener" class="_"}.
 - Fixed environment variable expansion.
 - Validated depended-on services exist in consistency check. Fixes [compose#8910](https://github.com/docker/compose/issues/8910){:target="_blank" rel="noopener" class="_"}.
-- Fixed hash usage in environment values. Fixes [compose#9509](https://github.com/docker/compose/issues/9509){:target="_blank" rel="noopener" class="_"}. 
+- Fixed hash usage in environment values. Fixes [compose#9509](https://github.com/docker/compose/issues/9509){:target="_blank" rel="noopener" class="_"}.
 - Docker Build: added fix to respect dependency order for classic builder. Fixes [compose#8538](https://github.com/docker/compose/issues/8538){:target="_blank" rel="noopener" class="_"}.
 - Fixed panic caused by empty string argument. Fixes [compose-switch#35](https://github.com/docker/compose-switch/issues/35){:target="_blank" rel="noopener" class="_"}.
 - Fixed start/restart as to not impact one-off containers. Fixes [compose#9509](https://github.com/docker/compose/issues/9044){:target="_blank" rel="noopener" class="_"}.
@@ -90,7 +90,7 @@ For the full change log or additional information, check the [Compose repository
 
 - Added new targets to build Compose binary before running e2e tests.
 - CI: released workflow to open a PR on docs repo with latest changes.
-- Dependencies upgrade: bumped [go to 1.18.4](https://github.com/golang/go/compare/go1.18.3...go1.18.4){:target="_blank" rel="noopener" class="_"}. 
+- Dependencies upgrade: bumped [go to 1.18.4](https://github.com/golang/go/compare/go1.18.3...go1.18.4){:target="_blank" rel="noopener" class="_"}.
 - Dependencies upgrade: bumped [compose-go to v1.2.9](https://github.com/compose-spec/compose-go/releases/tag/v1.2.9).
 - e2e: added test for `ps`.
 - e2e: split out pause tests and add more cases.
@@ -114,14 +114,14 @@ For the full change log or additional information, check the [Compose repository
 - Fixed `compose up` 'service not found' errors when using `--no-deps` option. Fixes [#9427](https://github.com/docker/compose/issues/9427){:target="_blank" rel="noopener" class="_"}.
 - Fixed `compose down` to respect `COMPOSE_REMOVE_ORPHANS` environment variable. Fixes [#9562](https://github.com/docker/compose/issues/9562){:target="_blank" rel="noopener" class="_"}.
 - Fixed project-level bind mount volumes. Fixes [docker/for-mac#6317](https://github.com/docker/for-mac/issues/6317){:target="_blank" rel="noopener" class="_"}.
-- Fixed parsing of properties `deploy.limits.cpus` and `deploy.limits.pids` to respect floating-point values. Fixes [#9542](https://github.com/docker/compose/issues/9542){:target="_blank" rel="noopener" class="_"} and [#9501](https://github.com/docker/compose/issues/9501){:target="_blank" rel="noopener" class="_"}. 
+- Fixed parsing of properties `deploy.limits.cpus` and `deploy.limits.pids` to respect floating-point values. Fixes [#9542](https://github.com/docker/compose/issues/9542){:target="_blank" rel="noopener" class="_"} and [#9501](https://github.com/docker/compose/issues/9501){:target="_blank" rel="noopener" class="_"}.
 - Fixed `compose ps` output to list all exposed ports. Fixes [#9257](https://github.com/docker/compose/issues/9527){:target="_blank" rel="noopener" class="_"}.
 - Fixed spelling mistakes in `compose ps` code.
 - Fixed `docker compose` to honor `--no-ansi` even when deprecated option is requested.
 - Fixed network name and network ID possible ambiguity.
 
 
-### Changes 
+### Changes
 
 - Upgrade: compose-go [v1.2.8](https://github.com/compose-spec/compose-go/releases/tag/v1.2.8){:target="_blank" rel="noopener" class="_"}.
 - Upgrade: buildx [v0.8.2](https://github.com/docker/buildx/releases/tag/v0.8.2){:target="_blank" rel="noopener" class="_"}.
@@ -168,7 +168,7 @@ For the full change log or additional information, check the [Compose repository
 - Added ddev's end-to-end test.
 - Dependencies update: bumping [compose-go to 1.2.6](https://github.com/compose-spec/compose-go/releases/tag/v1.2.6){:target="_blank" rel="noopener" class="_"}.
 - Dependencies update: bumping [compose-go to 1.2.7](https://github.com/compose-spec/compose-go/releases/tag/v1.2.7){:target="_blank" rel="noopener" class="_"}.
-- Dependencies update: bumping [golang to 1.18](https://go.dev/doc/devel/release#go1.18){:target="_blank" rel="noopener" class="_"}. 
+- Dependencies update: bumping [golang to 1.18](https://go.dev/doc/devel/release#go1.18){:target="_blank" rel="noopener" class="_"}.
 
 For the full change log or additional information, check the [Compose repository 2.6.0 release page](https://github.com/docker/compose/releases/tag/v2.6.0){:target="_blank" rel="noopener" class="_"}.
 
@@ -231,10 +231,10 @@ For the full change log or additional information, check the [Compose repository
 - Added ssh config to the build options when building an image from a `docker compose up` command. Fixes [#9338](https://github.com/docker/compose/issues/9338){:target="_blank" rel="noopener" class="_"}.
 - Added inspection to container checking if a TTY is required. Running services with `tty:true` specified now show console output. Fixes [#9288](https://github.com/docker/compose/issues/9288){:target="_blank" rel="noopener" class="_"}.
 
-For the full change log or additional information, check the [Compose repository 2.4.1 release page](https://github.com/docker/compose/releases/tag/v2.4.1){:target="_blank" rel="noopener" class="_"}.  
+For the full change log or additional information, check the [Compose repository 2.4.1 release page](https://github.com/docker/compose/releases/tag/v2.4.1){:target="_blank" rel="noopener" class="_"}.
 
 
-## 2.4.0 
+## 2.4.0
 
 (2022-04-1)
 
@@ -257,10 +257,10 @@ For the full change log or additional information, check the [Compose repository
 - Removed code regarding an obsolete warning.
 - Vendor: github.com/containerd/containerd v1.6.2. Includes a fix for CVE-2022-24769 (doesn't affect our codebase).
 
-For the full change log or additional information, check the [Compose repository 2.4.0 release page](https://github.com/docker/compose/releases/tag/v2.4.0){:target="_blank" rel="noopener" class="_"}.  
+For the full change log or additional information, check the [Compose repository 2.4.0 release page](https://github.com/docker/compose/releases/tag/v2.4.0){:target="_blank" rel="noopener" class="_"}.
 
 
-## 2.3.4 
+## 2.3.4
 
 (2022-03-25)
 
@@ -268,11 +268,11 @@ For the full change log or additional information, check the [Compose repository
 
 - Removed a container with no candidate now produces a warning instead of an error. Fixes [#9255](https://github.com/docker/compose/issues/9255){:target="_blank" rel="noopener" class="_"}.
 - Recovered behavior for 'compose up -d' of recreating containers of compose file images with refreshed content. Fixes [#9259](https://github.com/docker/compose/issues/9259){:target="_blank" rel="noopener" class="_"}.
-- Removed the "Deprecated" mentions from -i and -t options to run and exec commands. These options are on by default and in use. Fixes [#9229](https://github.com/docker/compose/pull/9229#discussion_r819730788){:target="_blank" rel="noopener" class="_"}. 
+- Removed the "Deprecated" mentions from -i and -t options to run and exec commands. These options are on by default and in use. Fixes [#9229](https://github.com/docker/compose/pull/9229#discussion_r819730788){:target="_blank" rel="noopener" class="_"}.
 
 ### Changes
 
-- Removed the "Deprecated" mention from the --filter flag, to keep consistency with other commands. 
+- Removed the "Deprecated" mention from the --filter flag, to keep consistency with other commands.
 - Docker compose --status, --filter and --format flags documentation updates.
 - Dependencies update: Bumped github.com/spf13/cobra from 1.3.0 to 1.4.0. Cobra library no longer requires Viper and all of its indirect dependencies [See cobra's release page](https://github.com/spf13/cobra/releases){:target="_blank" rel="noopener" class="_"}.
 - Dependencies update: Bumped buildx from v0.7.1 to v0.8.0.
@@ -282,13 +282,13 @@ Fixes [#9172](https://github.com/docker/compose/issues/9172){:target="_blank" re
 - Introduced changes to use RunExec and RunStart from docker/cli to handle all the interactive/tty/* terminal logic.
 - Changed Compose API reference docs automation to pick up diffs code vs. docs.
 
-For the full change log or additional information, check the [Compose repository 2.3.4 release page](https://github.com/docker/compose/releases/tag/v2.3.4){:target="_blank" rel="noopener" class="_"}.  
+For the full change log or additional information, check the [Compose repository 2.3.4 release page](https://github.com/docker/compose/releases/tag/v2.3.4){:target="_blank" rel="noopener" class="_"}.
 
-## Other Releases 
+## Other Releases
 
 (2022-03-8 to 2022-04-14)
 
-For the releases later than 1.29.2 and earlier than 2.3.4, please check the [Compose repository release pages](https://github.com/docker/compose/releases){:target="_blank" rel="noopener" class="_"}.  
+For the releases later than 1.29.2 and earlier than 2.3.4, please check the [Compose repository release pages](https://github.com/docker/compose/releases){:target="_blank" rel="noopener" class="_"}.
 
 ## 1.29.2
 (2021-05-10)
@@ -351,7 +351,7 @@ For the releases later than 1.29.2 and earlier than 2.3.4, please check the [Com
 
 - Added `compose.yml` and `compose.yaml` to the default filename list.
 
-## 1.28.5 
+## 1.28.5
 (2021-02-26)
 
 ### Bugs
@@ -409,7 +409,7 @@ For a list of PRs and issues fixed in this release, see [Compose 1.28.3](https:/
 
 - CI setup update
 
-## 1.28.0 
+## 1.28.0
 (2021-01-20)
 
 ### Features
@@ -472,7 +472,7 @@ For a list of PRs and issues fixed in this release, see [Compose 1.28.3](https:/
 
 - Updated READMEs.
 
-## 1.27.4 
+## 1.27.4
 (2020-09-24)
 
 ### Bug fixes
@@ -483,7 +483,7 @@ For a list of PRs and issues fixed in this release, see [Compose 1.28.3](https:/
 
 - Added protocol to the Docker socket address.
 
-## 1.27.3 
+## 1.27.3
 (2020-09-16)
 
 ### Bug fixes
@@ -518,7 +518,7 @@ For a list of PRs and issues fixed in this release, see [Compose 1.28.3](https:/
 
 - Preserved the version number configured in the Compose file.
 
-## 1.27.0 
+## 1.27.0
 (2020-09-07)
 
 ### Features

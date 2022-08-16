@@ -142,7 +142,7 @@ $ docker build -t java-docker --target test .
 
 The build output is truncated for simplicity, but you can see that our tests ran succesfully and passed. Let’s break one of the tests and observe the output when our tests fail.
 
-Open the `src/test/java/org/springframework/samples/petclinic/model/ValidatorTests.java` file and change the assertion 
+Open the `src/test/java/org/springframework/samples/petclinic/model/ValidatorTests.java` file and change the assertion:
 
 ```java
 assertThat(violation.getMessage()).isEqualTo("must not be empty");

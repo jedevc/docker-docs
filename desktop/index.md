@@ -17,7 +17,7 @@ redirect_from:
 {: .important}
 
 Docker Desktop is an easy-to-install application for your Mac or Windows environment
-that enables you to build and share containerized applications and microservices. 
+that enables you to build and share containerized applications and microservices.
 
 It provides a simple interface that enables you to manage your containers, applications, and images directly from your machine without having to use the CLI to perform core actions.
 

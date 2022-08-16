@@ -59,7 +59,7 @@ creating an os-provided bundled certificate chain.
 ## Create the client certificates
 
 Use OpenSSL's `genrsa` and `req` commands to first generate an RSA
-key and then use the key to create the certificate.   
+key and then use the key to create the certificate.
 
 ```console
 $ openssl genrsa -out client.key 4096

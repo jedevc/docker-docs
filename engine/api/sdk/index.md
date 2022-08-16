@@ -26,7 +26,7 @@ installed and coexist together.
 $ go get github.com/docker/docker/client
 ```
 
-The client requires a recent version of Go. Run `go version` and ensure that you 
+The client requires a recent version of Go. Run `go version` and ensure that you
 are running a currently supported version of Go
 
 
@@ -172,7 +172,7 @@ examples above use `localhost`, but any hostname would work.
 > The examples above assume you are using cURL 7.50.0 or above. Older versions of
 > cURL used a [non-standard URL notation](https://github.com/moby/moby/issues/17960){:target="_blank" rel="noopener" class="_"}
 > when using a socket connection.
-> 
+>
 > If you are using an older version of cURL, use `http:/<API version>/` instead,
 > for example, `http:/v{{ site.latest_engine_api_version}}/containers/1c6594faf5/start`
 {: .important}

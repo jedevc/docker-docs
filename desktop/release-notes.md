@@ -467,7 +467,7 @@ For frequently asked questions about Docker Desktop releases, see [FAQs](faqs/ge
 
 - Currently, if you are running a Kubernetes cluster, it will be deleted when you upgrade to Docker Desktop 4.8.0. We aim to fix this in the next release.
 
-#### For Linux 
+#### For Linux
 
 - Changing ownership rights for files in bind mounts fails. This is due to the way we have implemented file sharing between the host and VM within which the Docker Engine runs. We aim to resolve this issue in the next release.
 
@@ -482,7 +482,7 @@ For frequently asked questions about Docker Desktop releases, see [FAQs](faqs/ge
 
 ### Bug fixes and minor changes
 
-#### For all platforms 
+#### For all platforms
 
  - Fixed a crash on the Quick Start Guide final screen.
 
@@ -522,13 +522,13 @@ For frequently asked questions about Docker Desktop releases, see [FAQs](faqs/ge
 
 ### Bug fixes and minor changes
 
-#### For all platforms 
+#### For all platforms
  - Fixed a bug where the Registry Access Management policy was never refreshed after a failure.
  - Logs and terminals in the UI now respect your OS theme in light and dark mode.
  - Easily clean up many volumes at once via multi-select checkboxes.
  - Improved login feedback.
 
-#### For Mac 
+#### For Mac
 
 - Fixed an issue that sometimes caused Docker Desktop to display a blank white screen. Fixes [docker/for-mac#6134](https://github.com/docker/for-mac/issues/6134).
 - Fixed a problem where gettimeofday() performance drops after waking from sleep when using Hyperkit. Fixes [docker/for-mac#3455](https://github.com/docker/for-mac/issues/3455).
@@ -570,17 +570,17 @@ For frequently asked questions about Docker Desktop releases, see [FAQs](faqs/ge
 
 ### Security
 
-#### For all platforms 
+#### For all platforms
 - Fixed [CVE-2022-0847](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-0847){: target="_blank" rel="noopener" class="_"}, aka “Dirty Pipe”, an issue that could enable attackers to modify files in container images on the host, from inside a container.
   If using the WSL 2 backend, you must update WSL 2 by running `wsl --update`.
 
-#### For Windows 
+#### For Windows
 
 - Fixed [CVE-2022-26659](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-26659){: target="_blank" rel="noopener" class="_"}, which could allow an attacker to overwrite any administrator writable file on the system during the installation or the update of Docker Desktop.
 
 ### New
 
-#### For all platforms 
+#### For all platforms
 
 - The Docker Dashboard Volume Management feature now offers the ability to efficiently clean up volumes using multi-select checkboxes.
 
@@ -590,7 +590,7 @@ For frequently asked questions about Docker Desktop releases, see [FAQs](faqs/ge
 
 ### Upgrades
 
-#### For all platforms 
+#### For all platforms
 
 - [Docker Engine v20.10.13](../engine/release-notes/index.md#201013)
 - [Compose v2.3.3](https://github.com/docker/compose/releases/tag/v2.3.3)
@@ -606,7 +606,7 @@ For frequently asked questions about Docker Desktop releases, see [FAQs](faqs/ge
 
 ### Bug fixes and minor changes
 
-#### For all platforms 
+#### For all platforms
 
 - Fixed uploading diagnostics when an HTTPS proxy is set.
 - Made checking for updates from the systray menu open the Software updates settings section.
@@ -619,7 +619,7 @@ For frequently asked questions about Docker Desktop releases, see [FAQs](faqs/ge
 - Used speed up block device access when using the experimental `virtualization.framework`. See [benchmarks](https://github.com/docker/roadmap/issues/7#issuecomment-1050626886).
 - Increased default VM memory allocation to half of physical memory (min 2 GB, max 8 GB) for better out-of-the-box performances.
 
-#### For Windows 
+#### For Windows
 
 - Fixed the UI stuck in `starting` state forever although Docker Desktop is working fine from the command line.
 - Fixed missing Docker Desktop systray icon [docker/for-win#12573](https://github.com/docker/for-win/issues/12573)
@@ -642,7 +642,7 @@ For frequently asked questions about Docker Desktop releases, see [FAQs](faqs/ge
 
 ### Bug fixes and minor changes
 
-#### For Windows 
+#### For Windows
 - Fixed an issue that caused new installations to default to the Hyper-V backend instead of WSL 2.
 - Fixed a crash in the Docker Dashboard which would make the systray menu disappear.
 
@@ -678,7 +678,7 @@ Alternatively, you can edit the Docker Desktop settings file located at `%APPDAT
 
 ### Bug fixes and minor changes
 
-#### For all platforms 
+#### For all platforms
 
 - Fixed an issue where Docker Desktop incorrectly prompted users to sign in after they quit Docker Desktop and start the application.
 - Increased the filesystem watch (inotify) limits by setting `fs.inotify.max_user_watches=1048576` and `fs.inotify.max_user_instances=8192` in Linux. Fixes [docker/for-mac#6071](https://github.com/docker/for-mac/issues/6071).
@@ -700,7 +700,7 @@ Alternatively, you can edit the Docker Desktop settings file located at `%APPDAT
 #### For Windows
 Installing Docker Desktop 4.5.0 from scratch has a bug which defaults Docker Desktop to use the Hyper-V backend instead of WSL 2. This means, Windows Home users will not be able to start Docker Desktop as WSL 2 is the only supported backend. To work around this issue, you must uninstall 4.5.0 from your machine and then download and install Docker Desktop 4.5.1 or a higher version. Alternatively, you can edit the Docker Desktop settings.json file located at `%APPDATA%\Docker\settings.json` and manually switch the value of the `wslEngineEnabled` field to `true`.
 
-## Docker Desktop 4.4.4 
+## Docker Desktop 4.4.4
 2022-01-24
 
 > Download Docker Desktop
@@ -709,7 +709,7 @@ Installing Docker Desktop 4.5.0 from scratch has a bug which defaults Docker Des
 
 ### Bug fixes and minor changes
 
-#### For Windows 
+#### For Windows
 
 - Fixed logging in from WSL 2. Fixes [docker/for-win#12500](https://github.com/docker/for-win/issues/12500).
 
@@ -790,7 +790,7 @@ This only affects users if they are on Docker Desktop 4.3.0, 4.3.1 and the user 
 
 ### Known issues
 
-#### For all platforms 
+#### For all platforms
 
 - The tips of the week show on top of the mandatory login dialog when an organization restriction is enabled via a `registry.json` file.
 
@@ -925,7 +925,7 @@ actual memory usage. See
 
 - Ships [Docker Public Roadmap#226](https://github.com/docker/roadmap/issues/226){: target="_blank" rel="noopener" class="_"}
 
-**Software Updates**: The option to turn off automatic check for updates is now available for users on all Docker subscriptions, including Docker Personal and Docker Pro. All update-related settings have been moved to the **Software Updates** section. 
+**Software Updates**: The option to turn off automatic check for updates is now available for users on all Docker subscriptions, including Docker Personal and Docker Pro. All update-related settings have been moved to the **Software Updates** section.
 
 - Ships [Docker Public Roadmap#228](https://github.com/docker/roadmap/issues/228){: target="_blank" rel="noopener" class="_"}
 
@@ -997,7 +997,7 @@ actual memory usage. See
 
 ### New
 
-- **Software Updates**: The Settings tab now includes a new section to help you manage Docker Desktop updates. The **Software Updates** section notifies you whenever there's a new update and allows you to download the update or view information on what's included in the newer version. 
+- **Software Updates**: The Settings tab now includes a new section to help you manage Docker Desktop updates. The **Software Updates** section notifies you whenever there's a new update and allows you to download the update or view information on what's included in the newer version.
 - **Compose V2** You can now specify whether to use Docker Compose V2 in the General settings.
 - **Volume Management**: Volume management is now available for users on any subscription, including Docker Personal. Ships [Docker Public Roadmap#215](https://github.com/docker/roadmap/issues/215){: target="_blank" rel="noopener" class="_"}
 
@@ -1094,7 +1094,7 @@ For more information, see [Docker subscription overview](../subscription/index.m
 
 #### For Mac
 
-- Fixed a bug where SSH was not available for builds from git URL. Fixes [for-mac#5902](https://github.com/docker/for-mac/issues/5902) 
+- Fixed a bug where SSH was not available for builds from git URL. Fixes [for-mac#5902](https://github.com/docker/for-mac/issues/5902)
 
 #### For Windows
 

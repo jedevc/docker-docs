@@ -12,7 +12,7 @@ fetch_remote:
 > do not use this feature in production environments. You can [build Buildx from source](https://github.com/docker/buildx#building){: target="_blank" rel="noopener" class="_"}
 > to test the remote driver or use the following command to download and
 > install an edge release of Buildx:
-> 
+>
 > ```console
 > $ echo "FROM docker/buildx-bin:master" | docker buildx build --platform=local --output . -f - .
 > $ mkdir -p ~/.docker/cli-plugins/

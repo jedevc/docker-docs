@@ -27,12 +27,12 @@ Syft v0.43.0
  ✔ Cataloged packages      [385 packages]
 
 NAME                      VERSION                        TYPE
-... 
+...
 bsdutils                  1:2.36.1-8+deb11u1             deb
 ca-certificates           20210119                       deb
 ...
-log4j-api                 2.17.1                         java-archive  
-log4j-core                2.17.1                         java-archive  
+log4j-api                 2.17.1                         java-archive
+log4j-core                2.17.1                         java-archive
 ...
 ```
 

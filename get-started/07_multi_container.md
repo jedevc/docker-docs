@@ -13,7 +13,7 @@ reasons:
 - Separate containers let you version and update versions in isolation
 - While you may use a container for the database locally, you may want to use a managed service
   for the database in production. You don't want to ship your database engine with your app then.
-- Running multiple processes will require a process manager (the container only starts one process), 
+- Running multiple processes will require a process manager (the container only starts one process),
   which adds complexity to container startup/shutdown
 
 And there are more reasons. So, we will update our application to work like this:
@@ -53,9 +53,9 @@ For now, we will create the network first and attach the MySQL container at star
         -e MYSQL_DATABASE=todos \
         mysql:5.7
     ```
-    
+
     If you are using an ARM based chip, e.g. Macbook M1 Chips / Apple Silicon, then use this command.
-    
+
     ```console
     $ docker run -d \
         --network todo-app --network-alias mysql \

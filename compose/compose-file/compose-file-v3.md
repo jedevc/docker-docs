@@ -477,7 +477,7 @@ command or by another stack deployment. If the external config does not exist,
 the stack deployment fails with a `config not found` error.
 
 > Added in [version 3.3](compose-versioning.md#version-33) file format.
-> 
+>
 > `config` definitions are only supported in version 3.3 and higher  of the
 > compose file format.
 
@@ -567,7 +567,7 @@ an error.
 ### credential_spec
 
 > Added in [version 3.3](compose-versioning.md#version-33) file format.
-> 
+>
 > The `credential_spec` option was added in v3.3. Using group Managed Service
 > Account (gMSA) configurations with compose files is supported in file format
 > version 3.8 or up.
@@ -659,7 +659,7 @@ services:
 
 > Added in [version 3](compose-versioning.md#version-3) file format.
 
-Specify configuration related to the deployment and running of services. The following  
+Specify configuration related to the deployment and running of services. The following
 sub-options only takes effect when deploying to a [swarm](../../engine/swarm/index.md) with
 [docker stack deploy](../../engine/reference/commandline/stack_deploy.md), and is
 ignored by `docker-compose up` and `docker-compose run`, except for `resources`.
@@ -1663,7 +1663,7 @@ Expose ports.
 
 #### Short syntax
 
-There are three options: 
+There are three options:
 * Specify both ports (`HOST:CONTAINER`)
 * Specify just the container port (an ephemeral host port is chosen for the host port).
 * Specify the host IP address to bind to AND both ports (the default is 0.0.0.0, meaning all interfaces): (`IPADDR:HOSTPORT:CONTAINERPORT`). If HOSTPORT is empty (for example `127.0.0.1::80`), an ephemeral port is chosen to bind to on the host.
@@ -2028,7 +2028,7 @@ volumes:
 ```
 
 > **Note**
-> 
+>
 > For general information on volumes, refer to the [use volumes](../../storage/volumes.md)
 > and [volume plugins](/engine/extend/plugins_volume/) sections in the documentation.
 
@@ -2313,7 +2313,7 @@ volumes:
 
 > Note when using docker stack deploy
 >
-> External volumes that do not exist _are created_ if you use [docker stack deploy](#deploy) 
+> External volumes that do not exist _are created_ if you use [docker stack deploy](#deploy)
 > to launch the app in [swarm mode](../../engine/swarm/index.md) (instead of
 > [docker compose up](../../engine/reference/commandline/compose_up.md)). In swarm mode, a volume is
 > automatically created when it is defined by a service. As service tasks are

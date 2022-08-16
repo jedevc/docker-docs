@@ -87,7 +87,7 @@ Below is the Docker command to start the container and run tests:
 
 ```console
 $ docker-compose -f docker-compose.dev.yml run notes npm run test
-Creating node-docker_notes_run ... 
+Creating node-docker_notes_run ...
 
 > node-docker@1.0.0 test /code
 > mocha ./**/*.js
@@ -268,7 +268,7 @@ Step 8/8 : RUN npm run test
 
       -2
       +-1
-      
+
       at Context.<anonymous> (test/test.js:5:14)
       at processImmediate (internal/timers.js:461:21)
 

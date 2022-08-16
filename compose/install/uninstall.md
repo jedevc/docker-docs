@@ -5,7 +5,7 @@ keywords: compose, orchestration, uninstall, uninstallation, docker, documentati
 title: Uninstall Docker Compose
 ---
 
-Uninstalling Docker Compose depends on the method you have used to install Docker Compose. 
+Uninstalling Docker Compose depends on the method you have used to install Docker Compose.
 On this page you can find specific instructions to uninstall Docker Compose.
 
 
@@ -27,7 +27,7 @@ To remove the Compose CLI plugin, run:
 ```console
 $ sudo apt-get remove docker-compose-plugin
 ```
-Or, if using a different distro, use the equivalent package manager instruction to remove `docker-compose-plugin`. 
+Or, if using a different distro, use the equivalent package manager instruction to remove `docker-compose-plugin`.
 
 __Manually installed__
 
@@ -36,7 +36,7 @@ If you used `curl` to install Compose CLI plugin, to uninstall it run:
 ```console
 $ rm $DOCKER_CONFIG/cli-plugins/docker-compose
 ```
-    
+
 or, if you have installed Compose for all users, run:  
 
 ```console
@@ -45,7 +45,7 @@ $ rm /usr/local/lib/docker/cli-plugins/docker-compose
 
 You can also use:
 
-{% raw %}	
+{% raw %}
 ```console
 $ docker info --format '{{range .ClientInfo.Plugins}}{{if eq .Name "compose"}}{{.Path}}{{end}}{{end}}'
 ```

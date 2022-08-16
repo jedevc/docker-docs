@@ -16,21 +16,17 @@ See [Docker Pricing](https://www.docker.com/pricing){: target="_blank" rel="noop
 ## Definition of limits
 
 A user's limit is equal to the highest entitlement of their
-personal account or any organization they belong to. To take 
-advantage of this, you must log in to 
-[Docker Hub](https://hub.docker.com/){: target="_blank" rel="noopener" class="_"} 
+personal account or any organization they belong to. To take
+advantage of this, you must log in to
+[Docker Hub](https://hub.docker.com/){: target="_blank" rel="noopener" class="_"}
 as an authenticated user. For more information, see
-[How do I authenticate pull requests](#how-do-i-authenticate-pull-requests). 
+[How do I authenticate pull requests](#how-do-i-authenticate-pull-requests).
 Unauthenticated (anonymous) users will have the limits enforced via IP.
 
-- A pull request is defined as up to two `GET` requests on registry 
-manifest URLs (`/v2/*/manifests/*`).
-- A normal image pull makes a 
-single manifest request.
-- A pull request for a multi-arch image makes two 
-manifest requests. 
-- `HEAD` requests are not counted. 
-
+- A pull request is defined as up to two `GET` requests on registry manifest URLs (`/v2/*/manifests/*`).
+- A normal image pull makes a single manifest request.
+- A pull request for a multi-arch image makes two manifest requests.
+- `HEAD` requests are not counted.
 
 ## How do I know my pull requests are being limited
 
@@ -47,7 +43,7 @@ You will see this error message in the Docker CLI or in the Docker Engine logs.
 Valid manifest API requests to Hub will usually include the following rate limit headers in the response:
 
 ```
-ratelimit-limit    
+ratelimit-limit
 ratelimit-remaining
 ```
 
@@ -136,15 +132,15 @@ If you are using any third-party platforms, follow your provider’s instruction
 
 ## Other limits
 
-Docker Hub also has an overall rate limit to protect the application 
-and infrastructure. This limit applies to all requests to Hub 
-properties including web pages, APIs, image pulls, etc. The limit is 
+Docker Hub also has an overall rate limit to protect the application
+and infrastructure. This limit applies to all requests to Hub
+properties including web pages, APIs, image pulls, etc. The limit is
 applied per-IP, and while the limit changes over time depending on load
-and other factors, it is in the order of thousands of requests per 
+and other factors, it is in the order of thousands of requests per
 minute. The overall rate limit applies to all users equally
 regardless of account level.
 
-You can differentiate between these limits by looking at the error 
-code. The "overall limit" will return a simple `429 Too Many Requests` 
+You can differentiate between these limits by looking at the error
+code. The "overall limit" will return a simple `429 Too Many Requests`
 response. The pull limit returns a longer error message that
 includes a link to this page.

@@ -126,7 +126,7 @@ $ docker run --rm -ti -v /home/user/work:/work alpine
 
 It adds a `/work` directory to the target container to mirror the specified path.
 
-However, on Windows, you must update the source path. For example, if you are using 
+However, on Windows, you must update the source path. For example, if you are using
 the legacy Windows shell (`cmd.exe`), you can use the following command:
 
 ```console
@@ -254,7 +254,7 @@ Windows 10 Enterprise](https://github.com/docker/for-win/issues/74).
 
 If you have completed the steps described above and are still experiencing
 Docker Desktop startup issues, this could be because the Hypervisor is installed,
-but not launched during Windows startup. Some tools (such as older versions of 
+but not launched during Windows startup. Some tools (such as older versions of
 Virtual Box) and video game installers disable hypervisor on boot. To reenable it:
 
 1. Open an administrative console prompt.

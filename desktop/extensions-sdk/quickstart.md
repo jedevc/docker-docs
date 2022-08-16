@@ -8,7 +8,7 @@ redirect_from:
 
 Follow the guide below to build a basic Docker Extension quickly. The Quickstart guide automatically generates boilerplate files for you.
 
-> Note
+> **Note**
 >
 > NodeJS and Go are only required when you follow the quickstart guide to build an extension. It uses the `docker extension init` command to automatically generate boilerplate files. This command uses a template based on a ReactJS and Go application.
 

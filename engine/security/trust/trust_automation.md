@@ -5,20 +5,20 @@ title: Automation with content trust
 ---
 
 It is very common for Docker Content Trust to be built into existing automation
-systems. To allow tools to wrap Docker and push trusted content, there are 
-environment variables that can be passed through to the client. 
+systems. To allow tools to wrap Docker and push trusted content, there are
+environment variables that can be passed through to the client.
 
-This guide follows the steps as described 
-[here](index.md#signing-images-with-docker-content-trust) so please read 
-that and understand its prerequisites. 
+This guide follows the steps as described
+[here](index.md#signing-images-with-docker-content-trust) so please read
+that and understand its prerequisites.
 
 When working directly with the Notary client, it uses its [own set of environment variables](https://github.com/theupdateframework/notary/blob/master/docs/reference/client-config.md#environment-variables-optional){:target="_blank" rel="noopener" class="_"}.
 
 ## Add a delegation private key
 
-To automate importing a delegation private key to the local Docker trust store, we 
-need to pass a passphrase for the new key. This passphrase will be required 
-everytime that delegation signs a tag. 
+To automate importing a delegation private key to the local Docker trust store, we
+need to pass a passphrase for the new key. This passphrase will be required
+everytime that delegation signs a tag.
 
 ```console
 $ export DOCKER_CONTENT_TRUST_REPOSITORY_PASSPHRASE="mypassphrase123"
@@ -31,9 +31,9 @@ Successfully imported key from delegation.key
 ## Add a delegation public key
 
 If you initialising a repository at the same time as adding a Delegation
-public key, then you will need to use the local Notary Canonical Root Key's 
-passphrase to create the repositories trust data. If the repository has already 
-been initiated then you only need the repositories passphrase. 
+public key, then you will need to use the local Notary Canonical Root Key's
+passphrase to create the repositories trust data. If the repository has already
+been initiated then you only need the repositories passphrase.
 
 ```console
 # Export the Local Root Key Passphrase if required.
@@ -52,8 +52,8 @@ Successfully added signer: registry.example.com/admin/demo
 
 ## Sign an image
 
-Finally when signing an image, we will need to export the passphrase of the 
-signing key. This was created when the key was loaded into the local Docker 
+Finally when signing an image, we will need to export the passphrase of the
+signing key. This was created when the key was loaded into the local Docker
 trust store with `$ docker trust key load`.
 
 ```console
@@ -70,8 +70,8 @@ Successfully signed registry.example.com/admin/demo:1
 
 ## Build with content trust
 
-You can also build with content trust. Before running the `docker build` command, 
-you should set the environment variable `DOCKER_CONTENT_TRUST` either manually or 
+You can also build with content trust. Before running the `docker build` command,
+you should set the environment variable `DOCKER_CONTENT_TRUST` either manually or
 in a scripted fashion. Consider the simple Dockerfile below.
 
 ```dockerfile
@@ -94,7 +94,7 @@ a9539b34a6ab: Pull complete
 Digest: sha256:d149ab53f871
 ```
 
-If content trust is enabled, building from a Dockerfile that relies on tag 
+If content trust is enabled, building from a Dockerfile that relies on tag
 without trust data, causes the build command to fail:
 
 ```console

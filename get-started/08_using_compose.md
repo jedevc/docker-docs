@@ -117,7 +117,7 @@ PS> docker run -dp 3000:3000 `
         ports:
           - 3000:3000
     ```
- 
+
 4. Next, we'll migrate both the working directory (`-w /app`) and the volume mapping (`-v "$(pwd):/app"`) by using
    the `working_dir` and `volumes` definitions. Volumes also has a [short](../compose/compose-file/compose-file-v3.md#short-syntax-3) and [long](../compose/compose-file/compose-file-v3.md#long-syntax-3) syntax.
 

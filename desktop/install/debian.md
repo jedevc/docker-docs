@@ -12,7 +12,7 @@ This page contains information on how to install, launch, and upgrade Docker Des
 ## Prerequisites
 
 To install Docker Desktop successfully, you must:
- - Meet the [system requirements](linux-install.md#system-requirements). 
+ - Meet the [system requirements](linux-install.md#system-requirements).
  - Have a 64-bit version of Debian 11.
  - Uninstall the tech preview or beta version of Docker Desktop for Linux. Run:
 
@@ -47,7 +47,7 @@ $ sudo apt install gnome-terminal
 
 Recommended approach to install Docker Desktop on Debian:
 
-1. Set up [Docker's package repository](../../engine/install/debian.md#set-up-the-repository). 
+1. Set up [Docker's package repository](../../engine/install/debian.md#set-up-the-repository).
 
 2. Download latest [DEB package](https://desktop.docker.com/linux/main/amd64/docker-desktop-4.11.0-amd64.deb?utm_source=docker&utm_medium=webreferral&utm_campaign=docs-driven-download-linux-amd64).
 
@@ -82,7 +82,7 @@ The post-install script:
 
 ## Upgrade Docker Desktop
 
-Once a new version for Docker Desktop is released, the Docker UI shows a notification. 
+Once a new version for Docker Desktop is released, the Docker UI shows a notification.
 You need to download the new package each time you want to upgrade Docker Desktop and run:
 
 ```console
@@ -107,7 +107,7 @@ $ sudo rm /usr/local/bin/com.docker.cli
 $ sudo apt purge docker-desktop
 ```
 
-Remove the `credsStore` and `currentContext` properties from `$HOME/.docker/config.json`. Additionally, you must delete any edited configuration files manually. 
+Remove the `credsStore` and `currentContext` properties from `$HOME/.docker/config.json`. Additionally, you must delete any edited configuration files manually.
 
 ## Next steps
 

@@ -36,8 +36,8 @@ The `overlay2` storage driver is recommended.
 ### Uninstall old versions
 
 Older versions of Docker were called `docker` or `docker-engine`. If these are
-installed, uninstall them, along with associated dependencies. Also uninstall 
-`Podman` and the associated dependencies if installed already. 
+installed, uninstall them, along with associated dependencies. Also uninstall
+`Podman` and the associated dependencies if installed already.
 
 ```console
 $ sudo yum remove docker \

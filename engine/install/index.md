@@ -76,7 +76,7 @@ and architectures:
 > While the instructions below may work, Docker does not test or verify
 > installation on derivatives.
 
-- Users of Debian derivatives such as "BunsenLabs Linux", "Kali Linux" or 
+- Users of Debian derivatives such as "BunsenLabs Linux", "Kali Linux" or
   "LMDE" (Debian-based Mint) should follow the installation instructions for
   [Debian](debian.md), substituting the version of their distro for the
   corresponding Debian release. Refer to the documentation of your distro to find

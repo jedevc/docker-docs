@@ -47,15 +47,15 @@ clone our [ASP.NET Docker Sample](https://github.com/dotnet/dotnet-docker/tree/m
     # syntax=docker/dockerfile:1
     FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build-env
     WORKDIR /app
-    
+
     # Copy csproj and restore as distinct layers
     COPY *.csproj ./
     RUN dotnet restore
-    
+
     # Copy everything else and build
     COPY ../engine/examples ./
     RUN dotnet publish -c Release -o out
-    
+
     # Build runtime image
     FROM mcr.microsoft.com/dotnet/aspnet:6.0
     WORKDIR /app
@@ -94,11 +94,11 @@ obj/
       WORKDIR /App
       ENTRYPOINT ["dotnet", "aspnetapp.dll"]
       ```
-  
+
 4.  To make your build context as small as possible add a [`.dockerignore`
    file](/engine/reference/builder/#dockerignore-file)
    to your project folder.
-   
+
 ## Build and run the Docker image
 
 1.  Open a command prompt and navigate to your project folder.

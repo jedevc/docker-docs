@@ -36,13 +36,13 @@ Yes. You can submit your content as a team.
 The customer will be given the permissions to docker pull any tag associated with the source repo specified. We recommend that you create a distinct repo per plan and only use tags for different versions of that specific plan. For example, if you have a community, pro, and enterprise plan of a single product, you should create three separate repos, `namespace/community, namespace/pro, and namespace/enterprise`. Once a customer is entitled to your enterprise plan, they will be able to pull `store/namespace/enterprise:anytag`.
 
 ### What is the typical publishing time for new products and updates?
-Products are typically published within 24hrs of submission. 
+Products are typically published within 24hrs of submission.
 
 ### Once a product is published, what is the process for pushing a new build (1.2, 1.3)? Will we simply edit the same product, adding the newly tagged repos?
 
 Edit the same product and update with the newly tagged repos.
 
-Additionally, for product updates, you may include a set of *Release Notes*. These notes will not be published with the product listing itself. Instead, they will be emailed directly to the current subscriber of the product. This ensures that consumers will have timely, valuable alerts about the availability of new images and significant changes. 
+Additionally, for product updates, you may include a set of *Release Notes*. These notes will not be published with the product listing itself. Instead, they will be emailed directly to the current subscriber of the product. This ensures that consumers will have timely, valuable alerts about the availability of new images and significant changes.
 
 ### On the Information page, organization details are required. Do we need to fill those in again for every product we publish, or are they carried over? And if we change them for a later image publish, are they updated for all images published by our organization?
 
@@ -142,7 +142,7 @@ scheme built into the container, the licensing scheme can be a forcing function
 and stop the container. (_We do not build anything into the container, it is up to the publisher_).
 
 ### Does Docker Hub offer a Subscription service, handle our invoicing, payments, etc? What happened to Pay-via-Docker?
-Docker has deprecated the Pay-via-Docker subscription service. At this time, Docker Hub only supports distribution of content, under the BYOL Ungated model. In the future, we intend to release BYOL Gated functionality as well. If neither of these options will work for your product and licensing structure, please do inform your partner manager to help guide our feature prioritization. 
+Docker has deprecated the Pay-via-Docker subscription service. At this time, Docker Hub only supports distribution of content, under the BYOL Ungated model. In the future, we intend to release BYOL Gated functionality as well. If neither of these options will work for your product and licensing structure, please do inform your partner manager to help guide our feature prioritization.
 
 ### How does Docker handle Export control? Can individual countries be specified if differing from Docker's list of embargoed countries?
 
@@ -163,7 +163,7 @@ for the product you'd like to view analytics for. Here is a
 
 The Analytics reports contain information about the Subscriber and the
 relevant product plan. You can identify subscribers for each plan
-for each product. Only anonymous information is available to our publishers. If you'd like the opportunity to receive Lead information, Subscribed Users Only will need to be selected as the pull requirement. Please review the Technology Partner Program guide, and consult with your partner manager, for more information on Lead Generation plans. 
+for each product. Only anonymous information is available to our publishers. If you'd like the opportunity to receive Lead information, Subscribed Users Only will need to be selected as the pull requirement. Please review the Technology Partner Program guide, and consult with your partner manager, for more information on Lead Generation plans.
 
 ### Can I preview my submission before publishing?
 
@@ -182,7 +182,7 @@ Yes
 ### Can I have a publish by date for my content?
 
 Not yet. This is a planned enhancement, but we have no specific availability date at this time.
-In lieu of an automated approach, you may coordinate publication timeline directly with your partner manager. 
+In lieu of an automated approach, you may coordinate publication timeline directly with your partner manager.
 
 ### Can I convert my Hub Community profile to a Verified Publisher profile?
 
@@ -190,8 +190,8 @@ No, at this time you will need to separately sign up to become a Verified Publis
 
 ### Once I've completed the process to become a Verified Publisher with my partner manager, how do I get access to the Publisher Portal?
 
-You will need to apply for access. Please either follow [this direct link](https://hub.docker.com/publisher/center) or click the "Publisher Center" link at the bottom of any Docker Hub page. Please note, that you will need to be logged in with a DockerID in order to see this link. 
+You will need to apply for access. Please either follow [this direct link](https://hub.docker.com/publisher/center) or click the "Publisher Center" link at the bottom of any Docker Hub page. Please note, that you will need to be logged in with a DockerID in order to see this link.
 
 ### What kind of DockerID should I use to publish my content?
 
-Publishing should be done with an [Organization level DockerID](../orgs.md). We recommend that this account utilize a shared alias with your corporate email account and only individual DockerIDs with company email are added to that organization. 
+Publishing should be done with an [Organization level DockerID](../orgs.md). We recommend that this account utilize a shared alias with your corporate email account and only individual DockerIDs with company email are added to that organization.

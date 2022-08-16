@@ -122,12 +122,12 @@ $ docker exec -it roach ./cockroach sql --insecure
    ```
 
 3. Give the new user the necessary permissions:
-   
+
    ```sql
    GRANT ALL ON DATABASE mydb TO totoro;
    ```
 
-4. Type `quit` to exit the shell. 
+4. Type `quit` to exit the shell.
 
 An example of interaction with the SQL shell is presented below.
 
@@ -166,7 +166,7 @@ oliver@hki:~$
 
 ### Meet the example application
 
-Now that we have started and configured the database engine, we can switch our attention to the application. 
+Now that we have started and configured the database engine, we can switch our attention to the application.
 
 The example application for this module is an extended version of `docker-gs-ping` application we've used in the previous modules. You have two options:
 
@@ -190,7 +190,7 @@ We also have an update for another business requirement. The requirement _was_:
 
 And _now_ it's going to be:
 
-* The application responds with the string containing the count of messages stored in the database, enclosed in the parentheses. 
+* The application responds with the string containing the count of messages stored in the database, enclosed in the parentheses.
 
    Example output: `Hello, Docker! (7)`
 
@@ -357,8 +357,8 @@ Now, let’s run our container. This time we’ll need to set some environment v
 
 > **Note**
 >
-> Since we are running our CockroachDB cluster in "insecure" mode, the value for the password can be anything. 
-> 
+> Since we are running our CockroachDB cluster in "insecure" mode, the value for the password can be anything.
+>
 > **Don't run in insecure mode in production, though!**
 
 ```console
@@ -533,7 +533,7 @@ version: '3.8'
 
 services:
   docker-gs-ping-roach:
-    depends_on: 
+    depends_on:
       - roach
     build:
       context: .
@@ -697,7 +697,7 @@ To _stop_ the containers started by Docker Compose, press ctrl+c in the terminal
 
 ### Detached mode
 
-You can run containers started by the `docker-compose` command in detached mode, just as you would with the `docker` command, by using the `-d` flag. 
+You can run containers started by the `docker-compose` command in detached mode, just as you would with the `docker` command, by using the `-d` flag.
 
 To start the stack, defined by the Compose file in detached mode, run:
 

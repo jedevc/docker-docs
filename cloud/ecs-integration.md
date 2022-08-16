@@ -252,7 +252,7 @@ Services are registered automatically by the Docker Compose CLI on [AWS Cloud Ma
 Services can retrieve their dependencies using Compose service names (as they do when deploying locally with docker-compose), or optionally use the fully qualified names.
 
 > **Note**
-> 
+>
 > Short service names, nor the fully qualified service names, will resolve unless you enable public dns names in your VPC.
 
 ### Dependent service startup time and DNS resolution
@@ -529,21 +529,21 @@ use an existing domain name for your application:
 
         ```console
         $ aws ec2 describe-vpcs --filters Name=isDefault,Values=true --query 'Vpcs[0].VpcId'
-        
+
         "vpc-123456"
         $ aws ec2 describe-subnets --filters Name=vpc-id,Values=vpc-123456 --query 'Subnets[*].SubnetId'
-        
+
         [
             "subnet-1234abcd",
             "subnet-6789ef00",
         ]
         ```
- 
+
 2. Use the AWS CLI to create your load balancer. The AWS Web Console can also be used but will require adding at least one listener, which we don't need here.
 
         ```console
         $ aws elbv2 create-load-balancer --name myloadbalancer --type application --subnets "subnet-1234abcd" "subnet-6789ef00"
-        
+
         {
             "LoadBalancers": [
                 {
@@ -553,7 +553,7 @@ use an existing domain name for your application:
                     "DNSName": "myloadbalancer-123456.us-east-1.elb.amazonaws.com",
         <...>
         ```
- 
+
 3. To assign your application an existing domain name, you can configure your DNS with a
    CNAME entry pointing to just-created loadbalancer's `DNSName` reported as you created the loadbalancer.
 

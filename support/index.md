@@ -19,7 +19,7 @@ Find information on how to get support, and the scope of Docker support.
 If you have a paid Docker subscription, raise a ticket through [Docker support](https://hub.docker.com/support/contact/){:target="_blank" rel="noopener" class="_"}.
 
 All Docker users can seek support through the following resources, where we or the community respond on a best effort basis.
-   - [Docker Desktop for Windows GitHub repo](https://github.com/docker/for-win){:target="_blank" rel="noopener" class="_"} 
+   - [Docker Desktop for Windows GitHub repo](https://github.com/docker/for-win){:target="_blank" rel="noopener" class="_"}
    - [Docker Desktop for Mac GitHub repo](https://github.com/docker/for-mac){:target="_blank" rel="noopener" class="_"}
    - [Docker Desktop for Linux GitHub repo](https://github.com/docker/for-linux){:target="_blank" rel="noopener" class="_"}
    - [Docker Community Forums](https://forums.docker.com/){:target="_blank" rel="noopener" class="_"}

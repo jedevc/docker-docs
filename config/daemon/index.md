@@ -303,7 +303,7 @@ by sending a `SIGUSR1` signal to the daemon.
 - **Windows Server**:
 
   Download [docker-signal](https://github.com/moby/docker-signal).
-  
+
   Get the process ID of dockerd `Get-Process dockerd`.
 
   Run the executable with the flag `--pid=<PID of daemon>`.
@@ -325,7 +325,7 @@ The Docker daemon log can be viewed by using one of the following methods:
   Linux systems
 
 > **Note**
-> 
+>
 > It is not possible to manually generate a stack trace on Docker Desktop for
 > Mac or Docker Desktop for Windows. However, you can click the Docker taskbar
 > icon and choose **Troubleshoot** to send information to Docker if you

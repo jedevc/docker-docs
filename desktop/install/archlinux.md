@@ -20,9 +20,9 @@ $ sudo pacman -S gnome-terminal
 ```
 
 
-## Install Docker Desktop 
+## Install Docker Desktop
 
-1. Install client binaries. Docker does not have an Arch package repository. Binaries not included in the package must be installed manually before installing Docker Desktop. 
+1. Install client binaries. Docker does not have an Arch package repository. Binaries not included in the package must be installed manually before installing Docker Desktop.
 
 2. [Install Docker client binary on Linux](../../engine/install/binaries.md#install-daemon-and-client-binaries-on-linux). On Arch-based distributions, users must install the Docker client binary.
 Static binaries for the Docker client are available for Linux (as `docker`).
@@ -57,9 +57,7 @@ $ sudo rm /usr/local/bin/com.docker.cli
 $ sudo pacman -Rns docker-desktop
 ```
 
-Remove the `credsStore` and `currentContext` properties from `$HOME/.docker/config.json`. Additionally, you must delete any edited configuration files manually. 
-
-
+Remove the `credsStore` and `currentContext` properties from `$HOME/.docker/config.json`. Additionally, you must delete any edited configuration files manually.
 
 ## Next steps
 

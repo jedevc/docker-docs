@@ -11,9 +11,9 @@ Using personal access tokens provides some advantages over a password:
 * You can investigate the last usage of the access token and disable or delete
   it if you find any suspicious activity.
 * When using an access token, you can't perform any admin activity on the account, including changing the password. It protects your account if your computer is compromised.
-  
+
 Docker provides a [Docker Hub CLI](https://github.com/docker/hub-tool#readme){: target="_blank" rel="noopener" class="_"}
-tool (currently experimental) and an API that allows you to interact with Docker Hub. Browse 
+tool (currently experimental) and an API that allows you to interact with Docker Hub. Browse
 through the [Docker Hub API](/docker-hub/api/latest/){: target="_blank" rel="noopener" class="_"} documentation to explore the supported endpoints.
 
 > **Important**

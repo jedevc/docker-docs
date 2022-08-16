@@ -11,9 +11,10 @@ The `local` logging driver captures output from container's stdout/stderr and
 writes them to an internal storage that is optimized for performance and disk
 use.
 
-By default, the `local` driver preserves 100MB of log messages per container and
-uses automatic compression to reduce the size on disk. The 100MB default value is based on a 20M default size 
-for each file and a default count of 5 for the number of such files (to account for log rotation).
+By default, the `local` driver preserves 100MB of log messages per container
+and uses automatic compression to reduce the size on disk. The 100MB default
+value is based on a 20M default size for each file and a default count of 5 for
+the number of such files (to account for log rotation).
 
 > *Note*
 >

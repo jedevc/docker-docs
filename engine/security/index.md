@@ -112,10 +112,10 @@ socket.
 You can also expose the REST API over HTTP if you explicitly decide to do so.
 However, if you do that, be aware of the above mentioned security
 implications.
-Note that even if you have a firewall to limit accesses to the REST API 
+Note that even if you have a firewall to limit accesses to the REST API
 endpoint from other hosts in the network, the endpoint can be still accessible
 from containers, and it can easily result in the privilege escalation.
-Therefore it is *mandatory* to secure API endpoints with 
+Therefore it is *mandatory* to secure API endpoints with
 [HTTPS and certificates](protect-access.md).
 It is also recommended to ensure that it is reachable only from a trusted
 network or VPN.
@@ -211,17 +211,17 @@ those explicitly required for their processes.
 
 ## Docker Content Trust Signature Verification
 
-The Docker Engine can be configured to only run signed images. The Docker Content 
-Trust signature verification feature is built directly into the `dockerd` binary.  
-This is configured in the Dockerd configuration file. 
+The Docker Engine can be configured to only run signed images. The Docker Content
+Trust signature verification feature is built directly into the `dockerd` binary.
+This is configured in the Dockerd configuration file.
 
-To enable this feature, trustpinning can be configured in `daemon.json`, whereby 
+To enable this feature, trustpinning can be configured in `daemon.json`, whereby
 only repositories signed with a user-specified root key can be pulled and run.
-  
-This feature provides more insight to administrators than previously available with
-the CLI for enforcing and performing image signature verification. 
 
-For more information on configuring Docker Content Trust Signature Verificiation, go to 
+This feature provides more insight to administrators than previously available with
+the CLI for enforcing and performing image signature verification.
+
+For more information on configuring Docker Content Trust Signature Verificiation, go to
 [Content trust in Docker](trust/index.md).
 
 ## Other kernel security features

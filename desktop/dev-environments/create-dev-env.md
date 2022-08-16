@@ -10,11 +10,11 @@ You can create a Dev Environment from a:
 - Subfolder of a Git repository
 - Local folder
 
-This did not conflict with any of the local files or local tooling set up on your host. 
+This did not conflict with any of the local files or local tooling set up on your host.
 
 ## Create a Dev Environment from a Git repository
 
-The simplest way to get started with Dev Environments is to create a new environment by cloning the Git repository of the project you are working on. 
+The simplest way to get started with Dev Environments is to create a new environment by cloning the Git repository of the project you are working on.
 
 For example, create a new Dev Environment using the simple `single-dev-env` project from the [Docker Samples](https://github.com/dockersamples/single-dev-env){:target="_blank" rel="noopener" class="_"} GitHub repository.
 
@@ -82,9 +82,9 @@ Docker then clones the repository with your specified branch or tag.
 
 ## Create a Dev Environment from a subdirectory of a Git repository
 
->Note
+> **Note**
 >
->Currently, Dev Environments is not able to detect the main language of the subdirectory. You need to define your own base image or compose file in a .docker folder located in your subdirectory. For more information on how to configure, see the [React application with a Spring backend and a MySQL database sample](https://github.com/docker/awesome-compose/tree/master/react-java-mysql) or the [Go server with an Nginx proxy and a Postgres database sample](https://github.com/docker/awesome-compose/tree/master/nginx-golang-postgres). 
+> Currently, Dev Environments is not able to detect the main language of the subdirectory. You need to define your own base image or compose file in a .docker folder located in your subdirectory. For more information on how to configure, see the [React application with a Spring backend and a MySQL database sample](https://github.com/docker/awesome-compose/tree/master/react-java-mysql) or the [Go server with an Nginx proxy and a Postgres database sample](https://github.com/docker/awesome-compose/tree/master/nginx-golang-postgres).
 
 1. From **Dev Environments** in Docker Dashboard, click **Create**. The **Create a Dev Environment** dialog displays.
 2. Select **Get Started** and then copy your Git subfolder link into the **Enter the Git Repository** field on the **Existing Git repo** tab.

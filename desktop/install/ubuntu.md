@@ -8,13 +8,13 @@ redirect_from:
 ---
 
 
-This page contains information on how to install, launch and upgrade Docker Desktop on an Ubuntu distribution. 
+This page contains information on how to install, launch and upgrade Docker Desktop on an Ubuntu distribution.
 
 ## Prerequisites
 
 
 To install Docker Desktop successfully, you must:
- - Meet the [system requirements](linux-install.md#system-requirements) 
+ - Meet the [system requirements](linux-install.md#system-requirements)
  - Have a 64-bit version of either Ubuntu Jammy Jellyfish 22.04 (LTS) or Ubuntu Impish Indri 21.10.
  Docker Desktop is supported on `x86_64` (or `amd64`) architecture.
  - Uninstall the tech preview or beta version of Docker Desktop for Linux. Run:
@@ -81,7 +81,7 @@ The post-install script:
 
 ## Upgrade Docker Desktop
 
-Once a new version for Docker Desktop is released, the Docker UI shows a notification. 
+Once a new version for Docker Desktop is released, the Docker UI shows a notification.  
 You need to download the new package each time you want to upgrade Docker Desktop and run:
 
 ```console
@@ -106,7 +106,7 @@ $ sudo rm /usr/local/bin/com.docker.cli
 $ sudo apt purge docker-desktop
 ```
 
-Remove the `credsStore` and `currentContext` properties from `$HOME/.docker/config.json`. Additionally, you must delete any edited configuration files manually. 
+Remove the `credsStore` and `currentContext` properties from `$HOME/.docker/config.json`. Additionally, you must delete any edited configuration files manually.
 
 ## Next steps
 

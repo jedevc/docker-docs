@@ -53,7 +53,7 @@ and architectures:
 {% assign yes = '![yes](/images/green-check.svg){: .inline style="height: 14px; margin: 0 auto"}' %}
 
 
-| Platform                | x86_64 / amd64         | 
+| Platform                | x86_64 / amd64         |
 |:------------------------|:-----------------------|
 | [Ubuntu](ubuntu.md)     | [{{ yes }}](ubuntu.md) |
 | [Debian](debian.md)     | [{{ yes }}](debian.md) |
@@ -122,11 +122,12 @@ Log out and log back in so that your group membership is re-evaluated.
 
 ## Generic installation steps
 
-1. Download the correct package for your Linux distribution and install it with the corresponding package manager. 
- - [Install on Debian](debian.md)
- - [Install on Fedora](fedora.md)
- - [Install on Ubuntu](ubuntu.md)
- - [Install on Arch](archlinux.md) 
+1. Download the correct package for your Linux distribution and install it with the corresponding package manager.
+
+    - [Install on Debian](debian.md)
+    - [Install on Fedora](fedora.md)
+    - [Install on Ubuntu](ubuntu.md)
+    - [Install on Arch](archlinux.md)
 
 2. Open your **Applications** menu in Gnome/KDE Desktop and search for **Docker Desktop**.
 
@@ -197,7 +198,7 @@ machine. The current context is indicated with an asterisk (`*`);
 $ docker context ls
 NAME            DESCRIPTION                               DOCKER ENDPOINT                                  ...
 default *       Current DOCKER_HOST based configuration   unix:///var/run/docker.sock                      ...
-desktop-linux                                             unix:///home/<user>/.docker/desktop/docker.sock  ...        
+desktop-linux                                             unix:///home/<user>/.docker/desktop/docker.sock  ...
 ```
 
 If you have both Docker Desktop and Docker Engine installed on the same machine,
@@ -223,7 +224,7 @@ Refer to the [Docker Context documentation](../../engine/context/working-with-co
 
 ## Updates
 
-Once a new version for Docker Desktop is released, the Docker UI shows a notification. 
+Once a new version for Docker Desktop is released, the Docker UI shows a notification.  
 You need to download the new package each time you want to upgrade manually.
 
 To upgrade your installation of Docker Desktop, first stop any instance of Docker Desktop running locally,

@@ -254,8 +254,8 @@ You can back up the swarm using any manager. Use the following procedure.
     results are less predictable when restoring. While the manager is down,
     other nodes continue generating swarm data that is not part of this backup.
 
-    > Note
-    > 
+    > **Note**
+    >
     > Be sure to maintain the quorum of swarm managers. During the
     > time that a manager is shut down, your swarm is more vulnerable to
     > losing the quorum if further nodes are lost. The number of managers you
@@ -267,7 +267,7 @@ You can back up the swarm using any manager. Use the following procedure.
 
 4.  Restart the manager.
 
-To restore, see [Restore from a backup](#restore-from-a-backup). 
+To restore, see [Restore from a backup](#restore-from-a-backup).
 
 ## Recover from disaster
 
@@ -285,8 +285,8 @@ restore the data to a new swarm.
 3.  Restore the `/var/lib/docker/swarm` directory with the contents of the
     backup.
 
-    > Note
-    > 
+    > **Note**
+    >
     > The new node uses the same encryption key for on-disk
     > storage as the old one. It is not possible to change the on-disk storage
     > encryption keys at this time.

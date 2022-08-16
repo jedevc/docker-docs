@@ -33,11 +33,11 @@ You can set default values for any environment variables referenced in the
 Compose file, or used to configure Compose, in an [environment file](env-file.md)
 named `.env`. The `.env` file path is as follows:
 
-  - Starting with `+v1.28`, `.env` file is placed at the base of the project directory 
+  - Starting with `+v1.28`, `.env` file is placed at the base of the project directory
   - Project directory can be explicitly defined with the `--file` option or `COMPOSE_FILE`
-  environment variable. Otherwise, it is the current working directory where the 
+  environment variable. Otherwise, it is the current working directory where the
   `docker compose` command is executed (`+1.28`).
-  - For previous versions, it might have trouble resolving `.env` file with 
+  - For previous versions, it might have trouble resolving `.env` file with
   `--file` or `COMPOSE_FILE`. To work around it, it is recommended to use `--project-directory`,
   which overrides the path for the `.env` file. This inconsistency is addressed
   in `+v1.28` by limiting the filepath to the project directory.
@@ -84,14 +84,14 @@ services:
 
 You can override the environment file path using a command line argument `--env-file`.
 
-### Using the “--env-file”  option 
+### Using the “--env-file”  option
 
-By passing the file as an argument, you can store it anywhere and name it 
-appropriately, for example, `.env.ci`, `.env.dev`, `.env.prod`. Passing the file path is 
+By passing the file as an argument, you can store it anywhere and name it
+appropriately, for example, `.env.ci`, `.env.dev`, `.env.prod`. Passing the file path is
 done using the `--env-file` option:
 
 ```console
-$ docker compose --env-file ./config/.env.dev up 
+$ docker compose --env-file ./config/.env.dev up
 ```
 
 This file path is relative to the current working directory where the Docker Compose
@@ -115,7 +115,7 @@ services:
 The `.env` file is loaded by default:
 
 ```console
-$ docker compose convert 
+$ docker compose convert
 version: '3'
 services:
   web:
@@ -125,7 +125,7 @@ services:
 Passing the `--env-file` argument overrides the default file path:
 
 ```console
-$ docker compose --env-file ./config/.env.dev config 
+$ docker compose --env-file ./config/.env.dev config
 version: '3'
 services:
   web:

@@ -46,7 +46,7 @@ is that `sut` is defined. Its return code determines if tests passed or not.
 Tests **pass** if the `sut` service returns `0`, and **fail** otherwise.
 
 > **Note**
-> 
+>
 > Only the `sut` service and all other services listed in
 > [`depends_on`](../../compose/compose-file/compose-file-v2.md#depends_on) are
 > started. If you have services that poll for changes in other services, be sure

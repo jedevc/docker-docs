@@ -12,7 +12,7 @@ In this section you can find the list of pre-defined environment variables you c
 Sets the project name. This value is prepended along with the service name to
 the container's name on startup.
 
-For example, if your project name is `myapp` and it includes two services `db` and `web`, 
+For example, if your project name is `myapp` and it includes two services `db` and `web`,
 then Compose starts containers named `myapp-db-1` and `myapp-web-1` respectively.
 
 * **Defaults to:** the `basename` of the project directory.
@@ -38,19 +38,18 @@ Example: `COMPOSE_FILE=docker-compose.yml:docker-compose.prod.yml`.
 Specifies one or more profiles to be enabled on `compose up` execution.
 Services with matching profiles are started **as well as any services for which no profile has been defined**.
 
-For example, calling `docker compose up`with `COMPOSE_PROFILES=frontend` selects services with the 
+For example, calling `docker compose up`with `COMPOSE_PROFILES=frontend` selects services with the
 `frontend` profile as well as any services without a profile specified.
 
-
 * **Default separator:**  specify a list of profiles using a comma as separator.  
-Example: `COMPOSE_PROFILES=frontend,debug`  
-This example would enable all services matching both the `frontend` and `debug` profiles **and services without a profile**.
 
+Example: `COMPOSE_PROFILES=frontend,debug`  
+This example would enable all services matching both the `frontend` and `debug` profiles **and services without a profile**.  
 **See also** [Using profiles with Compose](../profiles.md) and the [`--profile` command-line option](index.md#use---profile-to-specify-one-or-more-active-profiles).
 
 ## DOCKER\_HOST
 
-Sets the URL of the Docker daemon. 
+Sets the URL of the Docker daemon.
 * **Defaults to:** `unix:///var/run/docker.sock`(same as with the Docker client).
 
 ## DOCKER\_TLS\_VERIFY
@@ -59,7 +58,7 @@ See `DOCKER_TLS_VERIFY` on the [Use the Docker command line](../../../engine/ref
 
 ## DOCKER\_CERT\_PATH
 
-Configures the path to the `ca.pem`, `cert.pem`, and `key.pem` files used for TLS verification.  
+Configures the path to the `ca.pem`, `cert.pem`, and `key.pem` files used for TLS verification.
 * **Defaults to:** `~/.docker`.
 
 See, `DOCKER_CERT_PATH` on the [Use the Docker command line](../../../engine/reference/commandline/cli/#environment-variables){:target="_blank" rel="noopener" class="_"} page.
@@ -68,7 +67,7 @@ See, `DOCKER_CERT_PATH` on the [Use the Docker command line](../../../engine/ref
 
 When enabled, Compose performs path conversion from Windows-style to Unix-style in volume definitions.
 
-* **Supported values:** 
+* **Supported values:**
     * `true` or `1`, to enable,
     * `false` or `0`, to disable.
 * **Defaults to:** `0`.
@@ -85,7 +84,7 @@ Specifies a different path separator for items listed in `COMPOSE_FILE`.
 
 When enabled, Compose doesn't try to detect orphaned containers for the project.
 
-* **Supported values:** 
+* **Supported values:**
     * `true` or `1`, to enable,
     * `false` or `0`, to disable.
 * **Defaults to:** `0`.
@@ -94,12 +93,12 @@ When enabled, Compose doesn't try to detect orphaned containers for the project.
 
 >**Important**
 >
-> The environment variables listed below are deprecated in v2.  
+> The environment variables listed below are deprecated in v2.
 
 ### COMPOSE\_API\_VERSION
 
-Deprecated in v2.  
-By default the API version is negotiated with the server. Use `DOCKER_API_VERSION`.  
+Deprecated in v2.
+By default the API version is negotiated with the server. Use `DOCKER_API_VERSION`.
 See `DOCKER_API_VERSION` on the [Use the Docker command line](../../../engine/reference/commandline/cli/#environment-variables){:target="_blank" rel="noopener" class="_"} page.
 
 ### COMPOSE\_HTTP\_TIMEOUT
@@ -120,12 +119,12 @@ Deprecated in v2.
 
 ### COMPOSE\_INTERACTIVE\_NO\_CLI
 
-Deprecated in v2.  
+Deprecated in v2.
 As v2 now uses the vendored code of [Docker CLI](https://github.com/docker/cli){:target="_blank" rel="noopener" class="_"}.
 
 ### COMPOSE\_DOCKER\_CLI\_BUILDx
 
-Deprecated in v2.  
+Deprecated in v2.
 Use `DOCKER_BUILDKIT` to select between BuildKit and the classic builder. If `DOCKER_BUILDKIT=0` then `docker build` uses the classic builder to build images.
 
 ## Related information

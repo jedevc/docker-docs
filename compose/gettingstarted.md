@@ -130,17 +130,17 @@ services:
     image: "redis:alpine"
 ```
 
-This Compose file defines two services: `web` and `redis`. 
+This Compose file defines two services: `web` and `redis`.
 
 ### Web service
 
 The `web` service uses an image that's built from the `Dockerfile` in the current directory.
-It then binds the container and the host machine to the exposed port, `8000`. This example service uses the default port for 
+It then binds the container and the host machine to the exposed port, `8000`. This example service uses the default port for
 the Flask web server, `5000`.
 
 ### Redis service
 
-The `redis` service uses a public [Redis](https://registry.hub.docker.com/_/redis/) 
+The `redis` service uses a public [Redis](https://registry.hub.docker.com/_/redis/)
 image pulled from the Docker Hub registry.
 
 ## Step 4: Build and run your app with Compose
@@ -315,9 +315,9 @@ Starting composetest_web_1...
 
 $ docker compose ps
 
-       Name                      Command               State           Ports         
+       Name                      Command               State           Ports
 -------------------------------------------------------------------------------------
-composetest_redis_1   docker-entrypoint.sh redis ...   Up      6379/tcp              
+composetest_redis_1   docker-entrypoint.sh redis ...   Up      6379/tcp
 composetest_web_1     flask run                        Up      0.0.0.0:8000->5000/tcp
 ```
 

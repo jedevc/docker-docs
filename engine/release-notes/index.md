@@ -78,7 +78,7 @@ This release of Docker Engine comes with updated versions of the `compose`,
 `buildx`, `containerd`, and `runc` components, as well as some minor bug fixes.
 
 > **Known issues**
-> 
+>
 > We've identified an issue with the [macOS CLI binaries](https://download.docker.com/mac/static/stable/){:target="_blank" rel="noopener" class="_"}
 > in the 20.10.15 release. This issue has been resolved in the [20.10.16](#201016) release.
 {:.important}
@@ -87,7 +87,7 @@ This release of Docker Engine comes with updated versions of the `compose`,
 
 - Use a RWMutex for stateCounter to prevent potential locking congestion [moby/moby#43426](https://github.com/moby/moby/pull/43426).
 - Prevent an issue where the daemon was unable to find an available IP-range in
-  some conditions [moby/moby#43360](https://github.com/moby/moby/pull/43360) 
+  some conditions [moby/moby#43360](https://github.com/moby/moby/pull/43360)
 
 ### Packaging
 
@@ -383,7 +383,7 @@ well as updated versions of the containerd.io package.
 - Fix incorrect `Your kernel does not support swap memory limit` warning when
   running with cgroups v2 [moby/moby#42479](https://github.com/moby/moby/pull/42479).
 - Windows: Fix a situation where containers were not stopped if `HcsShutdownComputeSystem`
-  returned an `ERROR_PROC_NOT_FOUND` error [moby/moby#42613](https://github.com/moby/moby/pull/42613) 
+  returned an `ERROR_PROC_NOT_FOUND` error [moby/moby#42613](https://github.com/moby/moby/pull/42613)
 
 ### Swarm
 

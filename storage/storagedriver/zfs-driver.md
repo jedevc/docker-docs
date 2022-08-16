@@ -39,7 +39,7 @@ use unless you have substantial experience with ZFS on Linux.
 > **Note**
 >
 > There is no need to use `MountFlags=slave` because `dockerd` and `containerd`
-> are in different mount namespaces. 
+> are in different mount namespaces.
 
 ## Configure Docker with the `zfs` storage driver
 

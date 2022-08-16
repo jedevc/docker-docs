@@ -20,7 +20,7 @@ think about how it will work for a large team, multiple developers, etc.
 
 ## Get the app
 
-Before we can run the application, we need to get the application source code onto 
+Before we can run the application, we need to get the application source code onto
 our machine. For real projects, you will typically clone the repo. But, for this tutorial,
 we have created a ZIP file containing the application.
 
@@ -66,8 +66,8 @@ see a few flaws in the Dockerfile below. But, don't worry. We'll go over them.
    the builder that we wanted to start from the `node:12-alpine` image. But, since we
    didn't have that on our machine, that image needed to be downloaded.
 
-   After the image was downloaded, we copied in our application and used `yarn` to 
-   install our application's dependencies. The `CMD` directive specifies the default 
+   After the image was downloaded, we copied in our application and used `yarn` to
+   install our application's dependencies. The `CMD` directive specifies the default
    command to run when starting a container from this image.
 
    Finally, the `-t` flag tags our image. Think of this simply as a human-readable name
@@ -81,14 +81,14 @@ see a few flaws in the Dockerfile below. But, don't worry. We'll go over them.
 Now that we have an image, let's run the application. To do so, we will use the `docker run`
 command (remember that from earlier?).
 
-1. Start your container using the `docker run` command and specify the name of the image we 
+1. Start your container using the `docker run` command and specify the name of the image we
    just created:
 
    ```console
    $ docker run -dp 3000:3000 getting-started
    ```
 
-   Remember the `-d` and `-p` flags? We're running the new container in "detached" mode (in the 
+   Remember the `-d` and `-p` flags? We're running the new container in "detached" mode (in the
    background) and creating a mapping between the host's port 3000 to the container's port 3000.
    Without the port mapping, we wouldn't be able to access the application.
 
@@ -106,7 +106,7 @@ command (remember that from earlier?).
 At this point, you should have a running todo list manager with a few items, all built by you.
 Now, let's make a few changes and learn about managing our containers.
 
-If you take a quick look at the Docker Dashboard, you should see your two containers running now 
+If you take a quick look at the Docker Dashboard, you should see your two containers running now
 (this tutorial and your freshly launched app container).
 
 ![Docker Dashboard with tutorial and app containers running](images/dashboard-two-containers.png)

@@ -26,12 +26,12 @@ computer, for example.
 
 2. Use [`docker push`](../engine/reference/commandline/push.md) to push any
    images you have built locally and want to keep to the [Docker Hub registry](../docker-hub/index.md).
-   
+
    Make sure to configure the [repository's visibility as "private"](../docker-hub/repos.md#private-repositories)
-   for images that should not be publicly accessible. 
+   for images that should not be publicly accessible.
 
    Alternatively, use [`docker image save -o images.tar image1 [image2 ...]`](../engine/reference/commandline/save.md)
-   to save any images you want to keep to a local tar file. 
+   to save any images you want to keep to a local tar file.
 
 After backing up your data, you can uninstall the current version of Docker Desktop
 and [install a different version](release-notes.md) or reset Docker Desktop to factory defaults.

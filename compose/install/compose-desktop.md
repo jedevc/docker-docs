@@ -5,9 +5,7 @@ keywords: compose, orchestration, install, installation, docker, documentation
 title: Install Compose through Docker Desktop
 ---
 
-
-
-With Docker Desktop you get Docker Engine, Docker CLI with Compose plugin as well as other components and tools. 
+With Docker Desktop you get Docker Engine, Docker CLI with Compose plugin as well as other components and tools.
 Check a list of what's shipped with Docker Desktop and a list of key features in the [Docker Desktop Overview](../../desktop/index.md){:target="_blank" rel="noopener" class="_"} page.
 
 Docker Desktop is available for Mac, Windows, and Linux.

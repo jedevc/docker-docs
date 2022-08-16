@@ -292,9 +292,9 @@ the [upgrading](#upgrading) guide for how to migrate away from these.
 > ```yaml
 > version: "3"
 > ```
-> 
+>
 > is equivalent to:
-> 
+>
 > ```yaml
 > version: "3.0"
 > ```

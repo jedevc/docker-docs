@@ -79,8 +79,8 @@ testuser:231072:65536
   however, highly discouraged due to [instability](https://github.com/moby/moby/issues/42302).
 
 - Rootless docker requires version of `slirp4netns` greater than `v0.4.0` (when `vpnkit` is not installed).
-  Check you have this with 
-  
+  Check you have this with
+
   ```console
   $ slirp4netns --version
   ```
@@ -109,10 +109,10 @@ testuser:231072:65536
 - Known to work on CentOS 8, RHEL 8, and Fedora 34.
 </div>
 <div id="hint-centos7-rhel7" class="tab-pane fade in" markdown="1">
-- Add `user.max_user_namespaces=28633` to `/etc/sysctl.conf` (or 
+- Add `user.max_user_namespaces=28633` to `/etc/sysctl.conf` (or
   `/etc/sysctl.d`) and run `sudo sysctl --system`.
 
-- `systemctl --user` does not work by default. 
+- `systemctl --user` does not work by default.
   Run `dockerd-rootless.sh` directly without systemd.
 </div>
 </div> <!-- tab-content -->

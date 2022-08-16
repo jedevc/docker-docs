@@ -16,7 +16,7 @@ include examples of customizing the output format.
 
 >**Note**
 >
-> When using the `--format` flag, you need observe your shell environment. 
+> When using the `--format` flag, you need observe your shell environment.
 > In a Posix shell, you can run the following with a single quote:
 >
 > {% raw %}
@@ -123,8 +123,8 @@ $ docker inspect --format='{{range .NetworkSettings.Networks}}{{println .IPAddre
 
 To find out what data can be printed, show all content as json:
 
-{% raw %} 
+{% raw %}
 ```console
 $ docker container ls --format='{{json .}}'
 ```
-{% endraw %} 
+{% endraw %}

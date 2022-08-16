@@ -169,7 +169,7 @@ Status: Downloaded newer image for ubuntu:18.04
 
 Each of these layers is stored in its own directory inside the Docker host's
 local storage area. To examine the layers on the filesystem, list the contents
-of `/var/lib/docker/<storage-driver>`. This example uses the `overlay2` 
+of `/var/lib/docker/<storage-driver>`. This example uses the `overlay2`
 storage driver:
 
 ```console
@@ -320,7 +320,7 @@ layers are the same.
     two layers that were added in the second image.
 
     > What are the `<missing>` steps?
-    > 
+    >
     > The `<missing>` lines in the `docker history` output indicate that those
     > steps were either built on another system and part of the `alpine` image
     > that was pulled from Docker Hub, or were built with BuildKit as builder.
@@ -366,7 +366,7 @@ layers are the same.
     bandwidth and storage.
 
     > Tip: format output of Docker commands with the `--format` option
-    > 
+    >
     > The examples above use the `docker image inspect` command with the `--format`
     > option to view the layer IDs, formatted as a JSON array. The `--format`
     > option on Docker commands can be a powerful feature that allows you to
@@ -386,7 +386,7 @@ layer. This means that the writable layer is as small as possible.
 
 When an existing file in a container is modified, the storage driver performs a
 copy-on-write operation. The specifics steps involved depend on the specific
-storage driver. For the `overlay2`, `overlay`, and `aufs` drivers, the 
+storage driver. For the `overlay2`, `overlay`, and `aufs` drivers, the
 copy-on-write operation follows this rough sequence:
 
 *  Search through the image layers for the file to update. The process starts
@@ -412,7 +412,7 @@ in a `copy_up` operation, therefore duplicating the file to the writable layer.
 > For write-heavy applications, you should not store the data in the container.
 > Applications, such as write-intensive database storage, are known to be
 > problematic particularly when pre-existing data exists in the read-only layer.
-> 
+>
 > Instead, use Docker volumes, which are independent of the running container,
 > and designed to be efficient for I/O. In addition, volumes can be shared among
 > containers and do not increase the size of your container's writable layer.
@@ -499,7 +499,7 @@ examines how much room they take up.
     ```console
     $ for i in {1..3}; do docker exec my_container_$i sh -c 'printf hello > /out.txt'; done
     ```
-   
+
     Running the `docker ps` command again afterward shows that those containers
     now consume 5 bytes each. This data is unique to each container, and not
     shared. The read-only layers of the containers are not affected, and are still
