@@ -1,7 +1,7 @@
 ---
 title: Optimizing builds with cache management
 description: Improve your build speeds by taking advantage of the builtin cache
-keywords:
+keywords: >
   build, buildx, buildkit, dockerfile, image layers, build instructions, build
   context
 ---
@@ -270,7 +270,7 @@ RUN echo "the first command" && \
 ```
 
 Another shell feature that allows you to simplify and concatenate commands in a
-neat way is [`heredoc`](https://en.wikipedia.org/wiki/Here_document){:
+neat way are [`heredocs`](https://en.wikipedia.org/wiki/Here_document){:
 target="blank" rel="noopener" class="\_"}. It enables you to create multi-line
 scripts with good readability:
 
